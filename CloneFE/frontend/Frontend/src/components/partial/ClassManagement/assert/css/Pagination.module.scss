@@ -1,0 +1,11 @@
+.paginate {
+  button {
+    background-color: #e2e8f0;
+  }
+  button:visited {
+    background-color: #ff0000;
+  }
+  .customPagination.Mui-selected {
+    background-color: red;
+  }
+}

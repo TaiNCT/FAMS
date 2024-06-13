@@ -1,0 +1,204 @@
+{
+    "IdentityServiceUrl": "http://localhost:5000",
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/Export/get/{params}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Export/get/{params}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Score/{params}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Score/{params}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/students/update/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/students/update/{id}",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/students/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/students/{id}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/cert/update/other",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/cert/update/other",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/cert/update",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/cert/update",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/cert/get",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/cert/get",
+            "UpstreamHttpMethod": [
+                "GET",
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/configuration",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/configuration",
+            "UpstreamHttpMethod": [
+                "GET",
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/cert/get/major",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/cert/get/major",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/ImportExcelscore",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ImportExcelScore",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/outputcache/{region}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/outputcache/{region}",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Score",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Score",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Score/{StudentId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Score/{StudentId}",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/ScoreUpdate/update/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ScoreUpdate/update/{id}",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        }
+    ],
+    "GlobalConfiguration": {}
+}

@@ -1,0 +1,24 @@
+.main {
+   width: 100%;
+   height: 100%;
+}
+
+.partial_view {
+   width: 100%;
+}
+
+.buttonContainer {
+   display: flex;
+   gap: 8px;
+   justify-content: space-between;
+}
+
+.buttonCreate {
+   display: flex;
+   gap: 8px;
+   margin-left: auto;
+}
+
+.buttonSearch {
+   margin-right: 5px;
+}

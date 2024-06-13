@@ -1,0 +1,12 @@
+.DateTimeContainer {
+  width: 100%;
+  div {
+    padding-top: 0px !important;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  div input {
+    height: 11px;
+  }
+}

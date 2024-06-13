@@ -1,0 +1,7 @@
+{
+  "Routes": [
+    "/connect/token",
+    "/api/identity",
+    "/api/identity/validate-token"
+  ]
+}

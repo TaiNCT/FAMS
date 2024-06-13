@@ -1,0 +1,288 @@
+{
+  "IdentityServiceUrl": "http://identity-svc",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Export/get/{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+          {
+              "Host": "score-svc",
+              "Port": 5001
+          }
+      ],
+      "UpstreamPathTemplate": "/api/Export/get/{params}",
+      "UpstreamHttpMethod": [
+          "GET"
+      ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/score/{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/score/{params}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/students/update/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/students/update/{id}",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/students/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/students/{id}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/cert/update/other",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cert/update/other",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/cert/update",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cert/update",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/cert/get",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cert/get",
+      "UpstreamHttpMethod": ["GET", "POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/configuration",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/configuration",
+      "UpstreamHttpMethod": ["GET", "POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/cert/get/major",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/cert/get/major",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/ImportExcelscore",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ImportExcelscore",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/outputcache/{region}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/outputcache/{region}",
+      "UpstreamHttpMethod": ["DELETE"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/score",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/score",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/score/{StudentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/score/{StudentId}",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/scoreUpdate/update/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "score-svc",
+          "Port": 5001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/scoreUpdate/update/{id}",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Score"
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

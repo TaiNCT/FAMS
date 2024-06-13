@@ -1,0 +1,1002 @@
+[
+    {
+        "class": 1,
+        "class_code": "ZBK",
+        "created_on": "1:06 AM",
+        "created_by": "Thomasine",
+        "duration": "Maroon",
+        "attendee": "Jermaine",
+        "location": "Chatturat",
+        "FSU": "Half"
+    },
+    {
+        "class": 2,
+        "class_code": "PEX",
+        "created_on": "11:52 PM",
+        "created_by": "Theressa",
+        "duration": "Purple",
+        "attendee": "Camellia",
+        "location": "Khamis Mushait",
+        "FSU": "Empty"
+    },
+    {
+        "class": 3,
+        "class_code": "SRB",
+        "created_on": "12:06 AM",
+        "created_by": "Ainsley",
+        "duration": "Orange",
+        "attendee": "Orv",
+        "location": "Pervomays’k",
+        "FSU": "Half"
+    },
+    {
+        "class": 4,
+        "class_code": "DHM",
+        "created_on": "1:01 PM",
+        "created_by": "Norby",
+        "duration": "Yellow",
+        "attendee": "Jaimie",
+        "location": "Lypnyazhka",
+        "FSU": "Full"
+    },
+    {
+        "class": 5,
+        "class_code": "NIO",
+        "created_on": "4:19 AM",
+        "created_by": "Kristian",
+        "duration": "Red",
+        "attendee": "Gabriello",
+        "location": "Stříbro",
+        "FSU": "Empty"
+    },
+    {
+        "class": 6,
+        "class_code": "QUG",
+        "created_on": "3:12 PM",
+        "created_by": "Rubie",
+        "duration": "Aquamarine",
+        "attendee": "Hermann",
+        "location": "Cabagan",
+        "FSU": "Half"
+    },
+    {
+        "class": 7,
+        "class_code": "GGR",
+        "created_on": "8:39 AM",
+        "created_by": "Alicea",
+        "duration": "Blue",
+        "attendee": "Vally",
+        "location": "Ban Nahin",
+        "FSU": "Full"
+    },
+    {
+        "class": 8,
+        "class_code": "PSL",
+        "created_on": "7:32 AM",
+        "created_by": "Dalli",
+        "duration": "Crimson",
+        "attendee": "Merill",
+        "location": "Dzhayrakh",
+        "FSU": "Empty"
+    },
+    {
+        "class": 9,
+        "class_code": "OGE",
+        "created_on": "11:52 PM",
+        "created_by": "Von",
+        "duration": "Crimson",
+        "attendee": "Matteo",
+        "location": "Denton",
+        "FSU": "Half"
+    },
+    {
+        "class": 10,
+        "class_code": "DSC",
+        "created_on": "8:53 AM",
+        "created_by": "Coral",
+        "duration": "Purple",
+        "attendee": "Dorette",
+        "location": "Ciangir",
+        "FSU": "Empty"
+    },
+    {
+        "class": 11,
+        "class_code": "VCL",
+        "created_on": "11:12 AM",
+        "created_by": "Karyn",
+        "duration": "Green",
+        "attendee": "Eleonora",
+        "location": "Sil-li",
+        "FSU": "Half"
+    },
+    {
+        "class": 12,
+        "class_code": "OHA",
+        "created_on": "11:46 PM",
+        "created_by": "Connie",
+        "duration": "Pink",
+        "attendee": "Bonny",
+        "location": "Ketawang",
+        "FSU": "Full"
+    },
+    {
+        "class": 13,
+        "class_code": "WGP",
+        "created_on": "1:30 PM",
+        "created_by": "Rois",
+        "duration": "Purple",
+        "attendee": "Julienne",
+        "location": "San José de Jáchal",
+        "FSU": "Half"
+    },
+    {
+        "class": 14,
+        "class_code": "LUK",
+        "created_on": "10:30 PM",
+        "created_by": "Broderic",
+        "duration": "Goldenrod",
+        "attendee": "Juliana",
+        "location": "Sangju",
+        "FSU": "Full"
+    },
+    {
+        "class": 15,
+        "class_code": "OIT",
+        "created_on": "3:21 AM",
+        "created_by": "Clemente",
+        "duration": "Red",
+        "attendee": "Reynold",
+        "location": "Bhairab Bāzār",
+        "FSU": "Half"
+    },
+    {
+        "class": 16,
+        "class_code": "MDC",
+        "created_on": "8:08 PM",
+        "created_by": "Vivianne",
+        "duration": "Khaki",
+        "attendee": "Susanne",
+        "location": "Xinba",
+        "FSU": "Full"
+    },
+    {
+        "class": 17,
+        "class_code": "PHT",
+        "created_on": "12:08 PM",
+        "created_by": "Ibrahim",
+        "duration": "Puce",
+        "attendee": "Lowrance",
+        "location": "Leopoldina",
+        "FSU": "Empty"
+    },
+    {
+        "class": 18,
+        "class_code": "SIE",
+        "created_on": "10:31 PM",
+        "created_by": "Ailey",
+        "duration": "Fuscia",
+        "attendee": "Bianka",
+        "location": "Maia",
+        "FSU": "Full"
+    },
+    {
+        "class": 19,
+        "class_code": "BWC",
+        "created_on": "6:52 AM",
+        "created_by": "Moira",
+        "duration": "Fuscia",
+        "attendee": "Remington",
+        "location": "Yuxin",
+        "FSU": "Empty"
+    },
+    {
+        "class": 20,
+        "class_code": "BGK",
+        "created_on": "2:32 PM",
+        "created_by": "Jeri",
+        "duration": "Yellow",
+        "attendee": "Alex",
+        "location": "Wonorejo",
+        "FSU": "Full"
+    },
+    {
+        "class": 21,
+        "class_code": "ZJN",
+        "created_on": "3:20 AM",
+        "created_by": "Alford",
+        "duration": "Yellow",
+        "attendee": "Nelson",
+        "location": "Ercheng",
+        "FSU": "Full"
+    },
+    {
+        "class": 22,
+        "class_code": "ZSE",
+        "created_on": "2:57 AM",
+        "created_by": "Prinz",
+        "duration": "Indigo",
+        "attendee": "Timothy",
+        "location": "Oemollo",
+        "FSU": "Half"
+    },
+    {
+        "class": 23,
+        "class_code": "RSA",
+        "created_on": "12:55 AM",
+        "created_by": "Sarine",
+        "duration": "Turquoise",
+        "attendee": "Yelena",
+        "location": "Zhucun",
+        "FSU": "Full"
+    },
+    {
+        "class": 24,
+        "class_code": "KAT",
+        "created_on": "8:45 PM",
+        "created_by": "Dora",
+        "duration": "Fuscia",
+        "attendee": "Lynnett",
+        "location": "Bayt Sāḩūr",
+        "FSU": "Half"
+    },
+    {
+        "class": 25,
+        "class_code": "PUN",
+        "created_on": "6:15 PM",
+        "created_by": "Jess",
+        "duration": "Teal",
+        "attendee": "Ronna",
+        "location": "Kiiminki",
+        "FSU": "Empty"
+    },
+    {
+        "class": 26,
+        "class_code": "ULN",
+        "created_on": "9:19 PM",
+        "created_by": "Marven",
+        "duration": "Puce",
+        "attendee": "Lucien",
+        "location": "Klana",
+        "FSU": "Empty"
+    },
+    {
+        "class": 27,
+        "class_code": "IES",
+        "created_on": "6:59 AM",
+        "created_by": "Gussi",
+        "duration": "Green",
+        "attendee": "Everard",
+        "location": "Lyon",
+        "FSU": "Full"
+    },
+    {
+        "class": 28,
+        "class_code": "IGL",
+        "created_on": "12:47 PM",
+        "created_by": "Rosaline",
+        "duration": "Fuscia",
+        "attendee": "Nikki",
+        "location": "Krasnogorodskoye",
+        "FSU": "Empty"
+    },
+    {
+        "class": 29,
+        "class_code": "EPG",
+        "created_on": "12:28 PM",
+        "created_by": "Deeann",
+        "duration": "Orange",
+        "attendee": "Andrey",
+        "location": "Solor",
+        "FSU": "Half"
+    },
+    {
+        "class": 30,
+        "class_code": "TFB",
+        "created_on": "3:04 PM",
+        "created_by": "Corina",
+        "duration": "Teal",
+        "attendee": "Estell",
+        "location": "Pambuhan",
+        "FSU": "Full"
+    },
+    {
+        "class": 31,
+        "class_code": "MVW",
+        "created_on": "2:24 AM",
+        "created_by": "Gregg",
+        "duration": "Indigo",
+        "attendee": "Mallorie",
+        "location": "Argir",
+        "FSU": "Full"
+    },
+    {
+        "class": 32,
+        "class_code": "SQV",
+        "created_on": "8:55 AM",
+        "created_by": "Marilee",
+        "duration": "Purple",
+        "attendee": "Lazarus",
+        "location": "Tsaratanana",
+        "FSU": "Half"
+    },
+    {
+        "class": 33,
+        "class_code": "SVL",
+        "created_on": "9:32 PM",
+        "created_by": "Tomasina",
+        "duration": "Khaki",
+        "attendee": "Clementina",
+        "location": "Nantou",
+        "FSU": "Empty"
+    },
+    {
+        "class": 34,
+        "class_code": "VDZ",
+        "created_on": "1:18 PM",
+        "created_by": "Rab",
+        "duration": "Mauv",
+        "attendee": "Trudie",
+        "location": "Montrouge",
+        "FSU": "Full"
+    },
+    {
+        "class": 35,
+        "class_code": "CUM",
+        "created_on": "1:14 PM",
+        "created_by": "Hyacintha",
+        "duration": "Fuscia",
+        "attendee": "Ailsun",
+        "location": "Montrouge",
+        "FSU": "Empty"
+    },
+    {
+        "class": 36,
+        "class_code": "CKA",
+        "created_on": "11:54 AM",
+        "created_by": "Jacinta",
+        "duration": "Teal",
+        "attendee": "Conroy",
+        "location": "Calingcing",
+        "FSU": "Empty"
+    },
+    {
+        "class": 37,
+        "class_code": "LUN",
+        "created_on": "9:31 PM",
+        "created_by": "Gabby",
+        "duration": "Khaki",
+        "attendee": "Mallorie",
+        "location": "Maţāy",
+        "FSU": "Empty"
+    },
+    {
+        "class": 38,
+        "class_code": "SWP",
+        "created_on": "3:14 PM",
+        "created_by": "Inge",
+        "duration": "Blue",
+        "attendee": "Korella",
+        "location": "Qinjiang",
+        "FSU": "Empty"
+    },
+    {
+        "class": 39,
+        "class_code": "HUW",
+        "created_on": "10:49 AM",
+        "created_by": "Miriam",
+        "duration": "Blue",
+        "attendee": "Arlen",
+        "location": "Hartford",
+        "FSU": "Full"
+    },
+    {
+        "class": 40,
+        "class_code": "UVO",
+        "created_on": "11:38 AM",
+        "created_by": "Claudius",
+        "duration": "Maroon",
+        "attendee": "Franklyn",
+        "location": "Veshnyaki",
+        "FSU": "Half"
+    },
+    {
+        "class": 41,
+        "class_code": "DZU",
+        "created_on": "10:41 AM",
+        "created_by": "Kelsey",
+        "duration": "Purple",
+        "attendee": "Joelle",
+        "location": "Keratéa",
+        "FSU": "Half"
+    },
+    {
+        "class": 42,
+        "class_code": "QPA",
+        "created_on": "11:40 AM",
+        "created_by": "Bea",
+        "duration": "Aquamarine",
+        "attendee": "Eveleen",
+        "location": "Shyroke",
+        "FSU": "Empty"
+    },
+    {
+        "class": 43,
+        "class_code": "KHD",
+        "created_on": "6:41 AM",
+        "created_by": "Darla",
+        "duration": "Aquamarine",
+        "attendee": "Wyndham",
+        "location": "Vale Mourão",
+        "FSU": "Full"
+    },
+    {
+        "class": 44,
+        "class_code": "BTY",
+        "created_on": "8:09 PM",
+        "created_by": "Missie",
+        "duration": "Red",
+        "attendee": "Nealson",
+        "location": "San Casimiro",
+        "FSU": "Full"
+    },
+    {
+        "class": 45,
+        "class_code": "IGO",
+        "created_on": "2:51 PM",
+        "created_by": "Shalom",
+        "duration": "Khaki",
+        "attendee": "Prissie",
+        "location": "Bác Ái",
+        "FSU": "Full"
+    },
+    {
+        "class": 46,
+        "class_code": "CSR",
+        "created_on": "9:53 PM",
+        "created_by": "Baryram",
+        "duration": "Aquamarine",
+        "attendee": "Sandro",
+        "location": "Hantai",
+        "FSU": "Half"
+    },
+    {
+        "class": 47,
+        "class_code": "CFC",
+        "created_on": "10:23 PM",
+        "created_by": "Sheelah",
+        "duration": "Pink",
+        "attendee": "Gabrila",
+        "location": "Znamenskoye",
+        "FSU": "Full"
+    },
+    {
+        "class": 48,
+        "class_code": "NGD",
+        "created_on": "7:29 PM",
+        "created_by": "Saxe",
+        "duration": "Red",
+        "attendee": "Tiffy",
+        "location": "Yangzi",
+        "FSU": "Empty"
+    },
+    {
+        "class": 49,
+        "class_code": "LKY",
+        "created_on": "12:54 AM",
+        "created_by": "Burke",
+        "duration": "Red",
+        "attendee": "Leone",
+        "location": "Ndeaboh",
+        "FSU": "Empty"
+    },
+    {
+        "class": 50,
+        "class_code": "LGL",
+        "created_on": "3:22 AM",
+        "created_by": "Rozalie",
+        "duration": "Blue",
+        "attendee": "Georges",
+        "location": "Alençon",
+        "FSU": "Empty"
+    },
+    {
+        "class": 51,
+        "class_code": "NEJ",
+        "created_on": "8:34 AM",
+        "created_by": "Barnabe",
+        "duration": "Fuscia",
+        "attendee": "Daryl",
+        "location": "Panyingkiran",
+        "FSU": "Full"
+    },
+    {
+        "class": 52,
+        "class_code": "EHM",
+        "created_on": "12:59 PM",
+        "created_by": "Mathian",
+        "duration": "Khaki",
+        "attendee": "Godfree",
+        "location": "Hagerstown",
+        "FSU": "Full"
+    },
+    {
+        "class": 53,
+        "class_code": "HBA",
+        "created_on": "6:39 AM",
+        "created_by": "Emmy",
+        "duration": "Mauv",
+        "attendee": "Winslow",
+        "location": "Poja Nae",
+        "FSU": "Full"
+    },
+    {
+        "class": 54,
+        "class_code": "FXY",
+        "created_on": "9:24 AM",
+        "created_by": "Haven",
+        "duration": "Mauv",
+        "attendee": "Laurena",
+        "location": "Portalegre",
+        "FSU": "Half"
+    },
+    {
+        "class": 55,
+        "class_code": "EDB",
+        "created_on": "1:02 AM",
+        "created_by": "Marji",
+        "duration": "Orange",
+        "attendee": "Averil",
+        "location": "Montrouge",
+        "FSU": "Full"
+    },
+    {
+        "class": 56,
+        "class_code": "PSR",
+        "created_on": "8:30 PM",
+        "created_by": "Nicholas",
+        "duration": "Pink",
+        "attendee": "Carmine",
+        "location": "Oak Bay",
+        "FSU": "Empty"
+    },
+    {
+        "class": 57,
+        "class_code": "MGD",
+        "created_on": "6:01 PM",
+        "created_by": "Nathaniel",
+        "duration": "Puce",
+        "attendee": "Libbi",
+        "location": "Três de Maio",
+        "FSU": "Empty"
+    },
+    {
+        "class": 58,
+        "class_code": "JCJ",
+        "created_on": "4:44 PM",
+        "created_by": "Janeta",
+        "duration": "Mauv",
+        "attendee": "Israel",
+        "location": "Sanxing",
+        "FSU": "Full"
+    },
+    {
+        "class": 59,
+        "class_code": "YYI",
+        "created_on": "8:10 AM",
+        "created_by": "Wadsworth",
+        "duration": "Orange",
+        "attendee": "Megen",
+        "location": "Meijiang",
+        "FSU": "Full"
+    },
+    {
+        "class": 60,
+        "class_code": "LEU",
+        "created_on": "4:07 AM",
+        "created_by": "Selle",
+        "duration": "Puce",
+        "attendee": "Terry",
+        "location": "Kamloops",
+        "FSU": "Full"
+    },
+    {
+        "class": 61,
+        "class_code": "LBE",
+        "created_on": "6:18 PM",
+        "created_by": "Vincent",
+        "duration": "Mauv",
+        "attendee": "Crawford",
+        "location": "Ma’ao",
+        "FSU": "Empty"
+    },
+    {
+        "class": 62,
+        "class_code": "NDN",
+        "created_on": "9:27 AM",
+        "created_by": "Justina",
+        "duration": "Maroon",
+        "attendee": "Jeana",
+        "location": "Livadiya",
+        "FSU": "Full"
+    },
+    {
+        "class": 63,
+        "class_code": "AYK",
+        "created_on": "10:20 AM",
+        "created_by": "Land",
+        "duration": "Orange",
+        "attendee": "Meridith",
+        "location": "Batarasa",
+        "FSU": "Empty"
+    },
+    {
+        "class": 64,
+        "class_code": "ZBR",
+        "created_on": "4:42 AM",
+        "created_by": "Etan",
+        "duration": "Red",
+        "attendee": "Care",
+        "location": "Morelos",
+        "FSU": "Empty"
+    },
+    {
+        "class": 65,
+        "class_code": "SJK",
+        "created_on": "6:45 PM",
+        "created_by": "Sile",
+        "duration": "Khaki",
+        "attendee": "Jeremiah",
+        "location": "Rungis",
+        "FSU": "Half"
+    },
+    {
+        "class": 66,
+        "class_code": "TIW",
+        "created_on": "6:27 PM",
+        "created_by": "Napoleon",
+        "duration": "Fuscia",
+        "attendee": "Gisella",
+        "location": "Weda",
+        "FSU": "Full"
+    },
+    {
+        "class": 67,
+        "class_code": "MZM",
+        "created_on": "12:09 AM",
+        "created_by": "Marge",
+        "duration": "Orange",
+        "attendee": "Lauretta",
+        "location": "Montenegro",
+        "FSU": "Full"
+    },
+    {
+        "class": 68,
+        "class_code": "ORV",
+        "created_on": "3:32 AM",
+        "created_by": "Nicole",
+        "duration": "Pink",
+        "attendee": "Harwilll",
+        "location": "Río Cauto",
+        "FSU": "Empty"
+    },
+    {
+        "class": 69,
+        "class_code": "BLK",
+        "created_on": "11:53 PM",
+        "created_by": "Mady",
+        "duration": "Teal",
+        "attendee": "Ruggiero",
+        "location": "Ventersdorp",
+        "FSU": "Half"
+    },
+    {
+        "class": 70,
+        "class_code": "QXH",
+        "created_on": "2:54 AM",
+        "created_by": "Fredrika",
+        "duration": "Yellow",
+        "attendee": "Bran",
+        "location": "Rio das Pedras",
+        "FSU": "Half"
+    },
+    {
+        "class": 71,
+        "class_code": "AIF",
+        "created_on": "7:14 AM",
+        "created_by": "Lorry",
+        "duration": "Aquamarine",
+        "attendee": "Wain",
+        "location": "Pericik",
+        "FSU": "Full"
+    },
+    {
+        "class": 72,
+        "class_code": "PRN",
+        "created_on": "8:16 AM",
+        "created_by": "Erminie",
+        "duration": "Yellow",
+        "attendee": "Finn",
+        "location": "Jinguoping",
+        "FSU": "Full"
+    },
+    {
+        "class": 73,
+        "class_code": "UCN",
+        "created_on": "9:16 AM",
+        "created_by": "Marney",
+        "duration": "Puce",
+        "attendee": "Pennie",
+        "location": "Tanzhou",
+        "FSU": "Full"
+    },
+    {
+        "class": 74,
+        "class_code": "NYE",
+        "created_on": "3:42 AM",
+        "created_by": "Alva",
+        "duration": "Red",
+        "attendee": "Ulric",
+        "location": "Gzy",
+        "FSU": "Empty"
+    },
+    {
+        "class": 75,
+        "class_code": "AMI",
+        "created_on": "10:23 PM",
+        "created_by": "Maritsa",
+        "duration": "Green",
+        "attendee": "Tracey",
+        "location": "Arco de Baúlhe",
+        "FSU": "Half"
+    },
+    {
+        "class": 76,
+        "class_code": "YYE",
+        "created_on": "4:24 AM",
+        "created_by": "Halli",
+        "duration": "Fuscia",
+        "attendee": "Matthieu",
+        "location": "Taraco",
+        "FSU": "Full"
+    },
+    {
+        "class": 77,
+        "class_code": "GAV",
+        "created_on": "3:38 PM",
+        "created_by": "Aubree",
+        "duration": "Pink",
+        "attendee": "Earvin",
+        "location": "Sanhui",
+        "FSU": "Full"
+    },
+    {
+        "class": 78,
+        "class_code": "CYI",
+        "created_on": "6:17 AM",
+        "created_by": "Kimberlee",
+        "duration": "Yellow",
+        "attendee": "Munroe",
+        "location": "Heishan",
+        "FSU": "Full"
+    },
+    {
+        "class": 79,
+        "class_code": "TMC",
+        "created_on": "8:28 AM",
+        "created_by": "Demeter",
+        "duration": "Pink",
+        "attendee": "Claybourne",
+        "location": "Yunping",
+        "FSU": "Empty"
+    },
+    {
+        "class": 80,
+        "class_code": "OBI",
+        "created_on": "12:17 PM",
+        "created_by": "Fleur",
+        "duration": "Purple",
+        "attendee": "Nananne",
+        "location": "Liuyuan",
+        "FSU": "Empty"
+    },
+    {
+        "class": 81,
+        "class_code": "LSN",
+        "created_on": "5:26 PM",
+        "created_by": "Leyla",
+        "duration": "Maroon",
+        "attendee": "Raymond",
+        "location": "Chojnów",
+        "FSU": "Empty"
+    },
+    {
+        "class": 82,
+        "class_code": "CEZ",
+        "created_on": "1:42 PM",
+        "created_by": "Gilbert",
+        "duration": "Pink",
+        "attendee": "Astrix",
+        "location": "Bukor",
+        "FSU": "Half"
+    },
+    {
+        "class": 83,
+        "class_code": "QCN",
+        "created_on": "2:48 PM",
+        "created_by": "Lin",
+        "duration": "Fuscia",
+        "attendee": "Hyacintha",
+        "location": "Nanterre",
+        "FSU": "Full"
+    },
+    {
+        "class": 84,
+        "class_code": "RAO",
+        "created_on": "4:39 PM",
+        "created_by": "Sara",
+        "duration": "Crimson",
+        "attendee": "Harwell",
+        "location": "Baltimore",
+        "FSU": "Half"
+    },
+    {
+        "class": 85,
+        "class_code": "NIO",
+        "created_on": "7:46 AM",
+        "created_by": "Culley",
+        "duration": "Goldenrod",
+        "attendee": "Marla",
+        "location": "Karis",
+        "FSU": "Full"
+    },
+    {
+        "class": 86,
+        "class_code": "MJG",
+        "created_on": "7:47 PM",
+        "created_by": "Katie",
+        "duration": "Orange",
+        "attendee": "Orion",
+        "location": "Kamphaeng Phet",
+        "FSU": "Empty"
+    },
+    {
+        "class": 87,
+        "class_code": "GCW",
+        "created_on": "2:43 AM",
+        "created_by": "Sarita",
+        "duration": "Turquoise",
+        "attendee": "Robby",
+        "location": "Old Shinyanga",
+        "FSU": "Full"
+    },
+    {
+        "class": 88,
+        "class_code": "BUC",
+        "created_on": "4:36 AM",
+        "created_by": "Jammie",
+        "duration": "Aquamarine",
+        "attendee": "Neale",
+        "location": "Ostuncalco",
+        "FSU": "Full"
+    },
+    {
+        "class": 89,
+        "class_code": "ORA",
+        "created_on": "8:52 AM",
+        "created_by": "Eyde",
+        "duration": "Aquamarine",
+        "attendee": "Ebeneser",
+        "location": "Paris 16",
+        "FSU": "Full"
+    },
+    {
+        "class": 90,
+        "class_code": "DRA",
+        "created_on": "4:01 PM",
+        "created_by": "Rudolph",
+        "duration": "Purple",
+        "attendee": "Pamelina",
+        "location": "Kuvshinovo",
+        "FSU": "Half"
+    },
+    {
+        "class": 91,
+        "class_code": "KWM",
+        "created_on": "8:55 PM",
+        "created_by": "Noble",
+        "duration": "Aquamarine",
+        "attendee": "Ossie",
+        "location": "Polowat",
+        "FSU": "Full"
+    },
+    {
+        "class": 92,
+        "class_code": "CDY",
+        "created_on": "4:28 AM",
+        "created_by": "Amie",
+        "duration": "Goldenrod",
+        "attendee": "Rustin",
+        "location": "La Hacienda",
+        "FSU": "Empty"
+    },
+    {
+        "class": 93,
+        "class_code": "ENJ",
+        "created_on": "4:10 PM",
+        "created_by": "Marcille",
+        "duration": "Mauv",
+        "attendee": "Lilli",
+        "location": "Palca",
+        "FSU": "Empty"
+    },
+    {
+        "class": 94,
+        "class_code": "GML",
+        "created_on": "7:04 PM",
+        "created_by": "Bobbi",
+        "duration": "Yellow",
+        "attendee": "Stanislas",
+        "location": "Kyaiklat",
+        "FSU": "Half"
+    },
+    {
+        "class": 95,
+        "class_code": "MGX",
+        "created_on": "8:06 PM",
+        "created_by": "Octavia",
+        "duration": "Turquoise",
+        "attendee": "Dora",
+        "location": "Guarumal",
+        "FSU": "Full"
+    },
+    {
+        "class": 96,
+        "class_code": "LIA",
+        "created_on": "12:38 AM",
+        "created_by": "Gasparo",
+        "duration": "Maroon",
+        "attendee": "Kaine",
+        "location": "Sabá",
+        "FSU": "Empty"
+    },
+    {
+        "class": 97,
+        "class_code": "AID",
+        "created_on": "6:55 AM",
+        "created_by": "Melamie",
+        "duration": "Pink",
+        "attendee": "Addy",
+        "location": "Huelkail",
+        "FSU": "Half"
+    },
+    {
+        "class": 98,
+        "class_code": "PHH",
+        "created_on": "4:49 PM",
+        "created_by": "Elsbeth",
+        "duration": "Green",
+        "attendee": "Kariotta",
+        "location": "Cipaku",
+        "FSU": "Empty"
+    },
+    {
+        "class": 99,
+        "class_code": "GAC",
+        "created_on": "6:34 PM",
+        "created_by": "Jolee",
+        "duration": "Crimson",
+        "attendee": "Aile",
+        "location": "Xinli",
+        "FSU": "Half"
+    },
+    {
+        "class": 100,
+        "class_code": "RLT",
+        "created_on": "5:18 AM",
+        "created_by": "Lauri",
+        "duration": "Pink",
+        "attendee": "Roderic",
+        "location": "Mulyadadi",
+        "FSU": "Full"
+    }
+]

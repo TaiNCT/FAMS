@@ -1,0 +1,159 @@
+$light-gray: rgb(240, 240, 240);
+$light-black: #111e2e;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+
+html {
+  font-family: Inter;
+  overflow-x: hidden;
+}
+.header {
+  background-color: $light-black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  font-weight: 650;
+  border-radius: 25px 25px 0 0 !important;
+}
+
+.modelContent {
+  border-radius: 25px 25px 25px 25px !important;
+}
+
+.unitContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+
+  .unitTitle {
+    flex: 1;
+    font-weight: bold;
+  }
+
+  .chapter {
+    flex: 8;
+    font-weight: bold;
+  }
+}
+
+.grayBackgroundDiv {
+  background-color: $light-gray;
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+.updateMaterialBox {
+  background-color: $light-gray;
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+.fileName {
+  display: flex;
+
+  p {
+    margin-left: 1rem;
+    // font-size: 1rem;
+    color: rgb(0, 38, 255);
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  .formGroup {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    margin-top: 1.5rem;    
+    width: 60%;
+  }
+
+  .formLabel {
+    margin-left: 1rem;
+    text-align: left;
+    width: 10rem;
+  }
+
+  .formControl {
+    
+    input[type="text"],
+    input[type="date"]{
+      padding: 12px;
+      border-radius: 12px;
+      width: 20rem;
+
+      &:hover {
+        cursor: text;
+      }
+    }
+
+    input[type="date"] {
+      width: 20rem;
+    }
+    
+    button {
+      margin-top: -1rem;
+      margin-left: 0rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg{
+        margin-right: 0.3rem;
+      }
+    }
+    
+  }
+}
+
+.actionMenu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.iconButton {
+  background-color: $light-gray !important;
+  margin-left: 1.3rem !important;
+
+  // width: 3rem;
+  // height: 3rem;
+
+  // align-items: center;
+  // display: flex;
+  // justify-content: center;
+
+  .icon {
+    color: #04356d;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.footer {
+  background-color: #111e2e !important;
+  color: white !important;
+  margin-bottom: 0.5rem;
+  padding: 8px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 1px 8px black;
+  }
+}
+
+.materialDetail {
+  margin-top: 0.3rem;
+}

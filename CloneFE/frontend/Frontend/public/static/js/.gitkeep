@@ -1,0 +1,5 @@
+This directory is possibly useful to store 3rd libraries, which for some reasons are needed in the form of...
+
+<script src="/static/js/cool-library.js"></script>
+
+instead of the typically recommended way => "npm install -D cool-library"

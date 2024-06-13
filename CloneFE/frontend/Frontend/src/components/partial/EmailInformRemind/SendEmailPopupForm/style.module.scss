@@ -1,0 +1,173 @@
+$primary_color: #2d3748;
+
+// General styling
+@mixin roundbox($color: #2f903f) {
+   margin-left: 0.6em;
+   scale: 0.9;
+   background-color: $color;
+   padding: 4px;
+   padding-left: 10px;
+   padding-right: 10px;
+   color: white;
+   border-radius: 15px;
+   &::before {
+      content: "Passed";
+   }
+}
+
+.loaderdiv {
+   min-height: 11em;
+   min-width: 20em;
+   display: flex;
+   justify-content: center;
+   > span {
+      margin: auto;
+   }
+}
+
+.error {
+   @include roundbox(tomato);
+   &::before {
+      content: "Failed" !important;
+   }
+}
+.ok {
+   @include roundbox();
+}
+
+// MailBody content styling
+
+.mock {
+   h1 {
+      background-color: #d45b13 !important;
+   }
+}
+
+.mailbody {
+   box-sizing: border-box;
+   flex: 1;
+   white-space: pre-wrap;
+   overflow: auto;
+   width: 100000px;
+   min-height: 10rem;
+   > section {
+      padding-left: 0.2em;
+      padding-right: 0.2em;
+      margin-top: 2em;
+      > div:first-child {
+         margin-bottom: 0.8em;
+         display: flex;
+         h1 {
+            font-size: 1.1em;
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+         }
+         // div {
+         //    @include roundbox;
+         // }
+      }
+   }
+}
+.overwrite_detailed_dialog {
+   div[role="dialog"] {
+      max-width: 55em;
+   }
+}
+.mailcard {
+   display: flex;
+   box-sizing: border-box;
+   align-items: flex-start;
+   gap: 1em;
+   padding-bottom: 0.2em;
+}
+.card {
+   height: auto !important;
+   border-radius: 10px;
+   overflow: hidden;
+   flex: 1;
+   box-sizing: border-box;
+   box-shadow: 0px 2px 4px #0000004d;
+   > h1 {
+      min-height: 2.5em;
+      padding: 0.5em;
+      font-size: 1em;
+      background-color: $primary_color;
+      text-align: center;
+      color: white;
+   }
+   > div {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em;
+      background-color: #edf2f7;
+      label {
+         font-size: 1em;
+      }
+      label:last-child {
+         font-weight: bold;
+         font-size: 1.1em;
+      }
+   }
+   .ave {
+      background-color: #dfdede;
+      label {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+      }
+   }
+}
+
+// Detailed email popup styling
+.email_header {
+   justify-content: flex-start !important;
+}
+
+// Normal popup styling
+.header {
+   background-color: $primary_color;
+   color: white;
+   text-align: center;
+}
+
+.overwrite_dropdown {
+   min-width: 15em;
+   font-size: 1.1em !important;
+   > div {
+      padding: 0.2em;
+      padding-left: 0.6em;
+   }
+}
+
+.scaledown {
+   > div > button {
+      scale: 0.8 !important;
+   }
+}
+
+.cardholder {
+   display: flex;
+   gap: 1em;
+   flex-direction: column;
+   > div {
+      font-size: 14px;
+      > h1 {
+         width: 8em;
+         font-weight: bold;
+      }
+      > label {
+         flex: 1;
+      }
+      flex: 1;
+      display: flex;
+      gap: 1em;
+   }
+
+   > div:last-child > h1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+}

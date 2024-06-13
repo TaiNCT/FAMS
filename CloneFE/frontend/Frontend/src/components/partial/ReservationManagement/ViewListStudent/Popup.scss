@@ -1,0 +1,57 @@
+.popup {
+  background-color: #FFFFFF; /* Make sure to include a hash symbol */
+  box-shadow: 3px 3px 20px 10px rgba(116, 114, 114, 0.3);
+  padding: 10px; /* Increase padding for better spacing */
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  z-index: 100000; /* Ensure it appears above other content */
+  height: 10vh;
+  width: 30vw;
+  margin-bottom: 5px;
+}
+
+.red-line,
+.green-line {
+  width: 5px;
+  height: 80%;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.red-line {
+  background-color: #AF0909; /* Adjust the color */
+}
+
+.green-line {
+  background-color: #79B879; /* Adjust the color */
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.content {
+  text-align: left;
+}
+
+.message {
+  font-weight: bold;
+}
+
+.light-text {
+  color: #afafaf; /* Light black text color */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.green-svg {
+  color: #66a070; /* Adjust the color */
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}

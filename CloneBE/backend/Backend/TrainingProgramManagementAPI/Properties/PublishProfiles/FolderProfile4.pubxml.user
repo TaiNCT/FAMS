@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\TrainingProgramAPIPublish</_PublishTargetUrl>
+    <History>True|2024-03-05T15:31:09.1998932Z;True|2024-03-05T20:54:01.8007703+07:00;True|2024-03-05T20:01:14.7820891+07:00;True|2024-03-03T00:23:40.0032457+07:00;True|2024-03-03T00:11:29.9214405+07:00;True|2024-03-03T00:10:58.9514166+07:00;True|2024-03-02T23:49:48.5194722+07:00;True|2024-02-29T15:14:50.5476547+07:00;True|2024-02-29T11:26:10.7559359+07:00;True|2024-02-29T11:24:22.8307794+07:00;True|2024-02-26T20:34:39.9976071+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

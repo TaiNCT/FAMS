@@ -1,0 +1,26 @@
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=(local);uid=sa;pwd=12345;database=FAMS;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Information",
+        "System": "Warning"
+      }
+    }
+  },
+  "ElasticConfiguration": {
+    "Uri": "http://localhost:9200",
+    "index": "class"
+  },
+  "AllowedHosts": "*"
+  // dotnet ef dbcontext scaffold "Server=(local);uid=sa;pwd=12345;database=FAMS;TrustServerCertificate=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -o Models ./
+}

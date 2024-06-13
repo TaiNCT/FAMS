@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #0b2136;
+    --sub-color: #474747;
+    --orange: #d45b13;
+}
+
+*{
+    font-family: 'Inter'
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

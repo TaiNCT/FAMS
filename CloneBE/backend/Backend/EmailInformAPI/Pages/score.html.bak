@@ -1,0 +1,105 @@
+<div class="tablecontent">
+	<table>
+		<tr>
+			<th>Quiz</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>HTML</td>
+			<td>{HTML}</td>
+		</tr>
+		<tr>
+			<td>CSS</td>
+			<td>{CSS}</td>
+		</tr>
+		<tr>
+			<td>Quiz 3</td>
+			<td>{Quiz3}</td>
+		</tr>
+		<tr>
+			<td>Quiz 4</td>
+			<td>{Quiz4}</td>
+		</tr>
+		<tr>
+			<td>Quiz 5</td>
+			<td>{Quiz5}</td>
+		</tr>
+		<tr>
+			<td>Quiz 6</td>
+			<td>{Quiz6}</td>
+		</tr>
+		<tr>
+			<td>Ave</td>
+			<td>{QuizAve}</td>
+		</tr>
+		<!-- Add more rows if needed -->
+	</table>
+	<table>
+		<tr>
+			<th>Asm</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>Practice 1</td>
+			<td>{Practice1}</td>
+		</tr>
+
+		<tr>
+			<td>Practice 2</td>
+			<td>{Practice2}</td>
+		</tr>
+		<tr>
+			<td>Practice 3</td>
+			<td>{Practice4}</td>
+		</tr>
+		<tr>
+			<td>Ave</td>
+			<td>{AsmAve}</td>
+		</tr>
+		<!-- Add more rows if needed -->
+	</table>
+	<table>
+		<tr>
+			<th>MOCK</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>MOCK</td>
+			<td>{MOCK}</td>
+		</tr>
+		<tr>
+			<td>Final</td>
+			<td>{Final}</td>
+		</tr>
+		<tr>
+			<td>GPA</td>
+			<td>{GPA}</td>
+		</tr>
+		<tr>
+			<td>Level</td>
+			<td>{Level}</td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th>Overview</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td>Quiz Final</td>
+			<td>{QuizFinal}</td>
+		</tr>
+		<tr>
+			<td>Audit</td>
+			<td>{Audit}</td>
+		</tr>
+		<tr>
+			<td>Practice Final</td>
+			<td>{PracticeFinal}</td>
+		</tr>
+		<tr>
+			<td>Status</td>
+			<td>{Status}</td>
+		</tr>
+	</table>
+</div>

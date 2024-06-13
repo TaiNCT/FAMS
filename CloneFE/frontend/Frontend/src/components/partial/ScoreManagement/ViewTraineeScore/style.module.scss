@@ -1,0 +1,180 @@
+// #30384b ---> header upper
+// #4a535c ---> header down
+// Border --> orange
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@mixin borderstyle {
+  border-left: 2px double #00000017;
+}
+
+.loader {
+  width: 6em;
+  > span {
+    color: white;
+  }
+}
+
+.pagination {
+  > div > div:last-child,
+  > div > p {
+    display: flex;
+  }
+}
+
+.general {
+  flex: 1;
+  position: relative;
+  overflow: auto;
+  min-height: 800px;
+  & > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // padding: 0px 5px 0px 5px;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    > div:nth-child(1) {
+      flex: 1;
+    }
+  }
+}
+
+.importButton {
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.main {
+  width: 100%;
+  // padding: 5px 10px 5px 10px;
+  padding-top: 4px;
+  font-family: "Inter", sans-serif;
+
+  .body {
+    border-radius: 20px;
+    background-color: white;
+  }
+  table > thead > tr:nth-child(2) > th svg {
+    margin-left: 5px;
+    transform: scale(0.8);
+    cursor: pointer;
+    cursor: pointer;
+  }
+  table th {
+    min-width: 11em;
+  }
+
+  table > thead > tr:nth-child(1) svg {
+    margin-left: 5px;
+    transform: scale(0.8);
+    cursor: pointer;
+    transform: scale(0.8);
+    cursor: pointer;
+  }
+
+  table > thead > tr:nth-child(1) th {
+    background-color: #30384b;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: larger;
+    font-weight: 700;
+    font-size: larger;
+  }
+
+  table > thead > tr:nth-child(2) th {
+    background-color: #4a535c;
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    font-weight: 600;
+    font-size: large;
+  }
+
+  table > tbody td {
+    text-align: left;
+    font-weight: 400;
+    font-size: medium;
+    font-weight: 400;
+    font-size: medium;
+  }
+
+  table > thead > tr:nth-child(1) > th:nth-child(3),
+  table > thead > tr:nth-child(1) > th:nth-child(4),
+  table > thead > tr:nth-child(1) > th:nth-child(5),
+  table > thead > tr:nth-child(1) > th:nth-child(12),
+  table > thead > tr:nth-child(2) > th:nth-child(2),
+  table > thead > tr:nth-child(2) > th:nth-child(2),
+  table > thead > tr:nth-child(2) > th:nth-child(9),
+  table > thead > tr:nth-child(2) > th:nth-child(13),
+  table > thead > tr:nth-child(2) > th:nth-child(14) {
+    @include borderstyle();
+  }
+}
+
+@mixin borderbtn {
+  border-radius: 15px;
+  color: white;
+  box-sizing: border-box;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.fail,
+.ok {
+  @include borderbtn();
+}
+
+.fail {
+  background-color: tomato;
+  &::before {
+    content: "Failed";
+  }
+}
+
+.ok {
+  background-color: #48a79a;
+  &::before {
+    content: "Passed";
+  }
+}
+
+.row {
+  > td:nth-child(3),
+  > td:nth-child(14),
+  > td:nth-child(10),
+  > td:nth-child(21) {
+    @include borderstyle();
+  }
+  td:nth-child(26) > svg {
+    cursor: pointer;
+  }
+}
+
+.popup {
+  button {
+    padding: 1em;
+    border-radius: 8px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    &:hover {
+      &:hover {
+        background-color: rgba(236, 236, 236, 0.719);
+      }
+    }
+  }
+}
+
+.modalOverlayBlur {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.blur {
+  filter: blur(5px);
+}

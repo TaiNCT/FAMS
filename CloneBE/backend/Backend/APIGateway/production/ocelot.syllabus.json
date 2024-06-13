@@ -1,0 +1,226 @@
+{
+  "IdentityServiceUrl": "http://identity-svc",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/Syllabus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/Syllabus",
+      "UpstreamHttpMethod": ["GET", "POST", "DELETE", "PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/Syllabus{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/Syllabus{params}",
+      "UpstreamHttpMethod": ["GET", "DELETE"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/date-range{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/date-range{params}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/duplicate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/duplicate",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/active-deactive",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/active-deactive",
+      "UpstreamHttpMethod": ["PATCH"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/{params}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/File/get-template-path",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/Syllabus/get-template-path",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/File/download-syllabus-template",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/Syllabus/download-syllabus-template",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/search-query{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/search-query{params}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/SearchSyllabusList",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/Syllabus/SearchSyllabusList",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/import",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "syllabus-svc",
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/import",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "Syllabus"
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

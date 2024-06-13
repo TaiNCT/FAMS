@@ -1,0 +1,38 @@
+{
+  "IdentityServiceUrl": "http://localhost:5000",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5008
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms",
+      "UpstreamHttpMethod": ["GET", "POST", "PUT"],
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Super Admin",
+        "Function": "TrainingProgram"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms/{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5008
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms/{params}",
+      "UpstreamHttpMethod": ["GET", "DELETE", "PATCH", "PUT", "POST"],
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Super Admin",
+        "Function": "TrainingProgram"
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

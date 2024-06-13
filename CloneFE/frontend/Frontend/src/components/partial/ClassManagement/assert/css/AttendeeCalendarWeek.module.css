@@ -1,0 +1,65 @@
+.intern {
+    background-color: #2d3748;
+    max-width: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 12px;
+    padding: 10px;
+    line-height: 1.5;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.fresher {
+    background-color: #ff7568;
+    max-width: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 12px;
+    padding: 10px;
+    line-height: 1.5;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.onlineFresher {
+    background-color: #2f903f;
+    max-width: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 12px;
+    padding: 10px;
+    line-height: 1.5;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.offFresher {
+    background-color: #d45b13;
+    max-width: 100px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 12px;
+    padding: 10px;
+    line-height: 1.5;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Box {
+    width: 80px;
+    background: red;
+}

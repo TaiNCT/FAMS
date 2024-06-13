@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+.main {
+  height: 100%;
+  display: grid;
+}
+.maincontent {
+  display: flex;
+}
+
+.headercontent {
+  color: white;
+  background-color: #111e2e;
+  font-size: 24px;
+  padding: 20px;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+.header {
+  width: 100%;
+}
+
+.templatedetailcontent {
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0px 1px 5px rgb(167, 167, 167);
+}
+.leftcolumm {
+  padding: 20px;
+}
+
+.leftcolumm tr {
+  text-align: left;
+}
+
+.leftcolumm th {
+  padding: 10px 70px 10px 10px;
+  text-align: left;
+}
+
+.rightcolumm {
+  padding: 20px;
+  margin-left: 200px;
+}
+
+.rightcolumm tr {
+  text-align: left;
+}
+
+.rightcolumm th {
+  padding: 10px 70px 10px 10px;
+  text-align: left;
+}
+
+.sendercontent {
+  color: white;
+  background-color: #111e2e;
+  font-size: 24px;
+  padding: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.sender {
+  border-radius: 10px;
+  margin: 24px;
+  border: 2px solid #8b8b8b;
+}
+
+.contenttext {
+  padding: 30px;
+  padding-right: 165px;
+  font-weight: bold;
+}
+
+.frominput {
+  display: flex;
+}
+
+.content {
+  border-radius: 10px;
+  margin: 24px;
+  border: 2px solid #8b8b8b;
+}
+
+.Contentcontent {
+  color: white;
+  background-color: #111e2e;
+  font-size: 24px;
+  padding: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+}
+
+.frominput input {
+  margin: 20px;
+  width: 100%;
+  border: 2px solid #8b8b8b;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.contenttextSubject {
+  padding: 30px;
+  padding-right: 140px;
+  font-weight: bold;
+}
+
+.fromgroup .input {
+  margin: 20px;
+  width: 100%;
+  border: 2px solid #8b8b8b;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.contenttextUseDearName {
+  padding: 20px 30px;
+  padding-right: 90px;
+  font-weight: bold;
+}
+
+.checkbox {
+  margin-top: 10px;
+}
+
+.contenttextBody {
+  padding: 20px 30px;
+  padding-right: 90px;
+  font-weight: bold;
+}
+
+.tableheader {
+  background-color: #111e2e;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 6px 20px;
+}
+
+.tableleft {
+  width: 50%;
+}
+
+.tablemodulescore1 {
+  margin: 20px;
+  border: 2px solid #8b8b8b;
+  border-radius: 10px;
+}
+
+.tablemodulescore1 th:first-child {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.scoretable {
+  display: flex;
+}
+
+.buttonSubmit {
+  float: right;
+  margin: 20px;
+}
+
+.saveButton {
+  background-color: #111e2e;
+  color: white;
+  border-radius: 10px;
+  padding: 4px 30px;
+  margin: 10px;
+}
+
+.cancelButton {
+  border-radius: 10px;
+  padding: 4px 20px;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+.editorInput {
+  width: 78%;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  margin-left: 80px;
+}

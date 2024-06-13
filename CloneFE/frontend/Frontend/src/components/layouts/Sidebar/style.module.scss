@@ -1,0 +1,15 @@
+.openIconParent {
+  justify-content: space-between;
+  display        : flex;
+  width          : 248px;
+  padding        : 2px;
+  text-align     : center;
+
+  &:hover {
+    cursor             : pointer;
+    background-color   : rgb(203 213 225);
+    // hover           : bg-slate-300 text-black-300 text-sm items-center gap-x-4 justify-self-start
+  }
+
+
+}

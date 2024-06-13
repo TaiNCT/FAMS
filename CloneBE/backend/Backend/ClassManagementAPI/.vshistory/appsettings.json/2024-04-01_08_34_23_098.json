@@ -1,0 +1,27 @@
+{
+  "ConnectionStrings": {
+    //"DefaultConnection": "Server=(local);uid=sa;pwd=12345;database=FAMS;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    "DefaultConnection": "Server=tcp:famsdatabase.database.windows.net,1433;Initial Catalog=FamsDB;Persist Security Info=False;User ID=fams;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information",
+      "Override": {
+        "Microsoft": "Information",
+        "System": "Warning"
+      }
+    }
+  },
+  "ElasticConfiguration": {
+    "Uri": "http://localhost:9200",
+    "index": "class"
+  },
+  "AllowedHosts": "*"
+  // dotnet ef dbcontext scaffold "Server=(local);uid=sa;pwd=12345;database=FAMS;TrustServerCertificate=True;MultipleActiveResultSets=true" Microsoft.EntityFrameworkCore.SqlServer -o Models ./
+}

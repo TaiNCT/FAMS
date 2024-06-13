@@ -1,0 +1,52 @@
+.ant-modal {
+  width: 20%;
+  height: 50%;
+  margin: auto;
+  background-clip: padding-box;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgb(167, 167, 167);
+  background-color: #fff;
+  font-size: 16px;
+}
+
+.ant-modal .modalBody {
+  padding: 20px 30px;
+}
+
+.select {
+  width: 40%;
+}
+
+.form_group {
+  width: 40%;
+}
+
+.clear,
+.submit {
+  color: #fff;
+  font-weight: bold;
+  background-color: rgb(56, 56, 100);
+  padding: 10px 20px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+  margin: 17px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  border: none;
+  border-radius: 5px;
+}
+
+.modal_footer {
+  justify-items: center;
+  text-align: center;
+}
+
+.tag {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form_group .ant-checkbox-group {
+  display: flex;
+  flex-wrap: wrap; /* Cho phép các checkbox xuống dòng khi không đủ không gian */
+}

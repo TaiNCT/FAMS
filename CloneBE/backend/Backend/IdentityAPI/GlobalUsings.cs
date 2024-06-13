@@ -1,0 +1,22 @@
+// System, Deps
+global using AutoMapper;
+global using FluentValidation;
+global using MassTransit;
+global using Duende.IdentityServer;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.EntityFrameworkCore;
+global using System.ComponentModel.DataAnnotations;
+global using System.Security.Claims;
+
+// Application deps
+global using IdentityModel;
+global using IdentityAPI;
+global using IdentityAPI.Data;
+global using IdentityAPI.Models;
+global using IdentityAPI.Services;
+global using IdentityAPI.Mappings;
+global using IdentityAPI.Validations;
+global using IdentityAPI.Payloads;
+global using IdentityAPI.Payloads.Requests;
+global using IdentityAPI.Payloads.Responses;

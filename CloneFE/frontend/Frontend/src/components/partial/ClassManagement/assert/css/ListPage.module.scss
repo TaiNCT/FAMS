@@ -1,0 +1,11 @@
+.container {
+  @font-face {
+    font-family: "Inter";
+    src: url("../../assert/fonts/Inter/static/Inter-Regular.ttf")
+      format("truetype");
+  }
+
+  * {
+    font-family: "Inter";
+  }
+}

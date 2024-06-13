@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+.titleStyle {
+  color: white;
+  background-color: #2d3748;
+  padding: 10px 14px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+}
+
+.errorText {
+  font-style: italic;
+  color: red;
+}
+
+.bodyModal {
+  padding: 0 90px;
+  margin-top: 30px;
+  width: 100%;
+}
+.footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: -25px;
+}
+.cancelbtn {
+  border: 2px solid #2d3748;
+  color: #2d3748;
+  padding: 0 28px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.createbtn {
+  border: 2px solid #2d3748;
+  color: white;
+  background-color: #2d3748;
+  padding: 0 28px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 20px;
+}
+.createbtn:hover {
+  background-color: #0e1b32 !important;
+  color: white;
+}
+
+.content {
+  padding: 10px 30px;
+}

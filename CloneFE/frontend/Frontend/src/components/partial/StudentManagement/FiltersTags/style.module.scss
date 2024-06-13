@@ -1,0 +1,19 @@
+.main {
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.ClassContainer {
+  box-sizing: border-box;
+  padding: 7px 15px;
+  min-width: 90px;
+  border-radius: 8px;
+  background-color: #474747;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}

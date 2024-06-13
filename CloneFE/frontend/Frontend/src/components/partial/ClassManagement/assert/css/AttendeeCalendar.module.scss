@@ -1,0 +1,86 @@
+.fresher {
+  background-color: #ff7568;
+  width: fit-content;
+  padding-left: 15px;
+  height: 28px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: white;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.onlineFresher {
+  background-color: #2f903f;
+  font-size: 12px;
+  width: fit-content;
+  padding-left: 15px;
+  height: 28px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.intern {
+  background-color: #2d3748;
+  width: fit-content;
+  font-size: 12px;
+  padding-left: 15px;
+  height: 28px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.offFresher {
+  background-color: #d45b13;
+  width: fit-content;
+  font-size: 12px;
+  padding-left: 15px;
+  height: 28px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pictures {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.test {
+  background-color: #2d3748;
+  width: 100px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  height: 28px;
+  line-height: 1.5;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Box {
+  width: 80px;
+  background: red;
+}

@@ -1,0 +1,29 @@
+.boxHeader {
+  .customBox {
+    margin-top: 1px;
+    padding: 10px;
+    background-color: #2d3748;
+    border-top-right-radius: 12px;
+    margin-bottom: 17px;
+  }
+}
+
+.boxHeader {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.activitiesLog {
+  font-size: 22px;
+  color: white;
+}
+
+.activity-table .ant-table-cell {
+  border-radius: 0;
+  max-width: 100px;
+  white-space: nowrap;
+}
+
+.boldText {
+  font-weight: bold;
+}

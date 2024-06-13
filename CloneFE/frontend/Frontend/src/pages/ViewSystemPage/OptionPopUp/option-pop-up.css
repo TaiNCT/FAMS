@@ -1,0 +1,105 @@
+.option-pop-up-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-pop-up-button {
+    border: none;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    padding: 5;
+    cursor: pointer;
+    padding: 13px 5px;
+    width: 190px;
+    background: #fff;
+}
+
+.option-pop-up-button div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.option-pop-up-button:hover {
+    background: #e2e8f0;
+}
+
+.option-pop-up-button:disabled {
+    cursor: not-allowed;
+}
+
+
+.confirm-pop-up-container {
+    padding: 15px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.confirm-pop-up-top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.confirm-pop-up-top-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+    border-bottom: 0.5px solid #e2e8f0;
+}
+
+.confirm-pop-up-top-2 {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.confirm-pop-up-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.confirm-pop-up-bottom div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.cancel-button {
+    background: none;
+    border: none;
+    color: red;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    text-decoration: underline;
+}
+
+.delete-button {
+    cursor: pointer;
+    background: #2d3748;
+    border: none;
+    padding: 5px 25px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.delete-button:hover {
+    background: red;
+}

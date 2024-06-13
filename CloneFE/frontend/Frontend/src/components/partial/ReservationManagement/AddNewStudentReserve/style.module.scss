@@ -1,0 +1,35 @@
+.header{
+    background-color: #2D3748;
+    color: white;
+    justify-content: center;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    .headerTitle {
+        width: 100%;
+        text-align: center;
+    }
+}
+.closeButton{
+    margin-right: 10px;
+}
+.headerContent{
+    display: flex;
+    width: 100%;
+}
+.form_label{
+    font-weight: bold;
+}
+.form_control{
+    width: 100%;
+}
+
+.selectBox {
+    width: 100%;
+    height: 30px;
+}
+.className_message{
+    color: red;
+    margin-top: 2px;
+}

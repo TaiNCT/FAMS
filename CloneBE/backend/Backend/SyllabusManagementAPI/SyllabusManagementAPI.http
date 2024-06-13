@@ -1,0 +1,6 @@
+@SyllabusManagementAPI_HostAddress = http://localhost:5165
+
+GET {{SyllabusManagementAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,46 @@
+.calendar {
+  .rbc-event {
+    background-color: #e2e8f0; /* Màu xanh dương */
+    border-radius: 0;
+    opacity: 0.8;
+    color: white;
+    border: 0;
+    display: block;
+  }
+
+  .rbc-header {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f0f0f0;
+  }
+
+  .rbc-toolbar {
+    button {
+      background-color: #3498db;
+      color: white;
+
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      padding: 10px 20px;
+      margin: 0 5px;
+
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+  }
+
+  .rbc-time-view {
+    .rbc-time-header {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .rbc-timeslot-group {
+      border-right: 1px solid #ddd;
+    }
+  }
+}

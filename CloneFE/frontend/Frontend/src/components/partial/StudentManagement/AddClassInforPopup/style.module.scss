@@ -1,0 +1,62 @@
+.inputGroup {
+  box-sizing: border-box;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 483px;
+  border-radius: 20px;
+}
+
+.PopupHeader {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  height: 44px;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  background-color: #2d3748;
+
+  > button {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.formContainer {
+  box-sizing: border-box;
+  padding: 22px 32px;
+}
+.inputFormGroup {
+  display: flex;
+  flex-direction: column;
+
+  > input {
+    height: 36px;
+    border-radius: 6px;
+  }
+}
+
+.formFooter {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+
+.cancelButton {
+  color: red;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.CreateButton {
+  background-color: #2d3748;
+  color: white;
+  margin-left: 20px;
+  padding: 2px 25px;
+  border-radius: 8px;
+}

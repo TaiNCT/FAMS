@@ -1,0 +1,16 @@
+.ActionButton {
+  width: 24px;
+  height: 24px;
+  background-color: transparent !important;
+  border: none;
+
+  > span {
+    margin: 0;
+  }
+}
+
+.menuIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}

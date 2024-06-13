@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+.container {
+  margin-top: 2em;
+  justify-content: center; // Center align the content
+  position: relative;
+}
+
+.container1 {
+  width: 80%;
+  border: 1px solid #ccc; // Add a border around the container
+  border-radius: 8px; // Add border radius for rounded corners
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Add a shadow for depth
+  height: max-content;
+  position: relative;
+  margin-bottom: 1em;
+  margin-left: 2%;
+}
+
+.container2 {
+  width: 98%;
+  margin-left: 5px;
+}
+
+.headerContent {
+  color: white;
+  background-color: #2D3748;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 0;
+  display: flex;
+
+  .headerTitle {
+    width: 97%;
+    text-align: center;
+  }
+
+  .cancelButton {
+    margin-left: -10px;
+  }
+}
+
+.classInfo {
+  color: #2D3748;
+  border-bottom: black solid 2px;
+  margin-top: 10px;
+
+  .className {
+    font-size: 30px;
+    margin-left: 20px;
+    margin-bottom: 6px;
+  }
+
+  .classInfoContent {
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .timeReserve {
+    margin-left: 8px;
+  }
+}
+
+.partTitle {
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+.moduleInfo {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+
+  .moduleTitle {
+    margin-right: 60px;
+  }
+
+  .moduleName {
+    font-weight: normal;
+  }
+}
+
+.feeContainer {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.feeContent {
+  display: flex;
+  margin-left: 30px;
+  width: max-content;
+  margin-bottom: 40px;
+}
+
+.listTable {
+  border-radius: 10px;
+  width: 500px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-right: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
+  .listTableTitle {
+    color: white;
+    background-color: #2D3748;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 4px 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .listItemContainer {
+    display: flex;
+    width: 100%;
+
+    .listTableItem {
+      background-color: lightcyan;
+      text-align: center;
+
+      .itemName {
+        padding-top: 10px;
+      }
+
+      .itemScore {
+        padding: 15px 0;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+
+    .listTableItem:first-child {
+      border-radius: 0 0 0 10px;
+    }
+
+    .listTableItem:last-child {
+      background-color: lightgrey;
+      border-radius: 0 0 10px 0;
+    }
+  }
+
+  .avgScoreTitle {
+    padding-top: 10px;
+  }
+
+  .avgScore {
+    padding: 15px 0;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+}
+
+.mockContent {
+  padding-left: 30px;
+  width: 100%;
+  border-bottom: 2px solid black;
+
+  .mockTable {
+    border-radius: 10px;
+    width: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
+    .mockTableTitle {
+      color: white;
+      background-color: darkorange;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 4px 0;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .mockItemContainer {
+      display: flex;
+      width: 100%;
+
+      .mockTableItem {
+        background-color: lightcyan;
+        text-align: center;
+
+        .itemName {
+          padding-top: 10px;
+        }
+
+        .itemScore {
+          padding: 15px 0;
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+
+      .mockTableItem:first-child {
+        border-radius: 0 0 0 10px;
+      }
+
+      .mockTableItem:last-child {
+        border-radius: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+.reserveInfo {
+  display: flex;
+
+  .reservePeriod {
+    font-weight: 600;
+    margin-left: 20px;
+    margin-top: 25px;
+    font-size: 15px;
+
+    span {
+      font-weight: normal;
+      margin-left: 150px;
+    }
+  }
+
+  .reserveReason {
+    font-weight: 600;
+    margin-left: 120px;
+    margin-top: 25px;
+    font-size: 15px;
+
+    span {
+      font-weight: normal;
+      margin-left: 120px;
+    }
+  }
+}
+
+.reserveCondition {
+  font-weight: 600;
+  margin-left: 20px;
+  margin-top: 40px;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.reserveConditionList {
+  display: flex;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+  padding-bottom: 30px;
+
+  .leftReserveCondition {
+    margin-left: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  .rightReserveCondition {
+    margin-left: 85px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.reClassContainer {
+  overflow-x: auto;
+  width: 100%;
+
+  .reClassContent {
+    width: max-content;
+    display: flex;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    .classItem {
+      padding: 40px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      margin-right: 30px;
+
+      .classItemHeader {
+        display: flex;
+        margin-bottom: 20px;
+
+        .className {
+          font-weight: 600;
+          font-size: 25px;
+          margin-right: 40px;
+        }
+
+        .classStatus {
+          color: white;
+          background-color: #2D3748;
+          border-radius: 40px;
+          padding: 10px 10px;
+          font-size: 12px;
+        }
+      }
+
+      .classItemInfo {
+        display: flex;
+        font-weight: 500;
+
+        .classPeriod {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+.popUpReClassRec {
+  position: fixed;
+}

@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build:
+      context: ./Frontend
+      args:
+        - VITE_API_HOST=http://localhost
+        - VITE_API_PORT=5000
+    ports:
+      - "8000:8000"

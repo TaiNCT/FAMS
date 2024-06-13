@@ -1,0 +1,459 @@
+{
+  "IdentityServiceUrl": "http://identity-svc",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/login",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/role-perms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/role-perms",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/get-perms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/get-perms",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/update-role-perms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/update-role-perms",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/get-role",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/get-role",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/search-user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/search-user",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/create-user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/create-user",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/check-mail",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/check-mail",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/check-username",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/check-username",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/check-phone",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/check-phone",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/update-user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/update-user",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/change-role",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/change-role",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/change-status",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/change-status",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/filter-user/{sortBy}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/filter-user/{sortBy}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/sync-to-elasticsearch",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/sync-to-elasticsearch",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/import-user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/import-user",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/import-user-perms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/import-user-perms",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/user-info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user-info",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/import-new-role",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/import-new-role",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "UserManagement"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/send-code",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/send-code",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/verify-code",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/verify-code",
+      "UpstreamHttpMethod": ["POST"]
+    },
+	{
+      "DownstreamPathTemplate": "/api/recover-pass",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/recover-pass",
+      "UpstreamHttpMethod": ["PUT"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/get-user-calendar",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/get-user-calendar",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+	{
+      "DownstreamPathTemplate": "/api/update-info",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/update-info",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/export-user-perms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/export-user-perms",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/export-user",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-svc",
+          "Port": 5003
+        }
+      ],
+      "UpstreamPathTemplate": "/api/export-user",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

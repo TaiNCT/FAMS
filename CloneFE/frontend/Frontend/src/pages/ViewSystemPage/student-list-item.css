@@ -1,0 +1,36 @@
+.system-view-loading-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 100px;
+}
+
+.system-view-loading-container img {
+  width: 92px;
+  height: 59px;
+}
+
+.status-column span {
+  padding: 10px;
+}
+
+.Active {
+  background: #2f903f;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.InActive {
+  background: #2d3748;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.Disabled {
+  background: #b9b9b9;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,257 @@
+{
+    "IdentityServiceUrl": "http://localhost:5000",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/GetAllFromElastic/{rowPerPage}/{currentPage}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/GetAllFromElastic/{rowPerPage}/{currentPage}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/SearchStudentsByElasticSearch/{keyword}/{rowPerPage}/{currentPage}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/SearchStudentsByElasticSearch/{keyword}/{rowPerPage}/{currentPage}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/AdvancedSearch/{rowPerPage}/{currentPage}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/AdvancedSearch/{rowPerPage}/{currentPage}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/InsertStudent",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/InsertStudent",
+      "UpstreamHttpMethod": [
+        "POST"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/UpdateDropOut",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/UpdateDropOut",
+      "UpstreamHttpMethod": [
+        "PUT"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/UpdateReserveStatus",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/UpdateReserveStatus",
+      "UpstreamHttpMethod": [
+        "PUT"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/SearchStudent",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/SearchStudent",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReClass/GetQuizListStudent/{reservedClassId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReClass/GetQuizListStudent/{reservedClassId}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReClass/GetAssignmentListStudent/{reservedClassId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReClass/GetAssignmentListStudent/{reservedClassId}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReClass/GetReClassDialogInfo/{reservedClassId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReClass/GetReClassDialogInfo/{reservedClassId}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReClass/GetReClassPossibilities/{reservedClassId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReClass/GetReClassPossibilities/{reservedClassId}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReClass/GetMock/{reservedClassId}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReClass/GetMock/{reservedClassId}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReClass/GetNextClassModuleList/{reservedClassId}/{reClassId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReClass/GetNextClassModuleList/{reservedClassId}/{reClassId}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReClass/BackToClass/{reservedClassId}/{reClassId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReClass/BackToClass/{reservedClassId}/{reClassId}",
+      "UpstreamHttpMethod": [
+        "POST"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/ExportReservedStudent",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/ExportReservedStudent",
+      "UpstreamHttpMethod": [
+        "POST"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/GetAllFromElasticForExport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/GetAllFromElasticForExport",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/SearchStudentsByElasticSearchForExport/{keyword}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/SearchStudentsByElasticSearchForExport/{keyword}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ReservedStudent/AdvancedSearchForExport",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5007
+        }
+      ],
+      "UpstreamPathTemplate": "/ReservedStudent/AdvancedSearchForExport",
+      "UpstreamHttpMethod": [
+        "GET"
+      ]
+    }
+  ],
+    "GlobalConfiguration": {}
+}

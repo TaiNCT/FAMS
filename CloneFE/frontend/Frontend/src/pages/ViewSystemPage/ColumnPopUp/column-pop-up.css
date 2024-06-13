@@ -1,0 +1,67 @@
+.column-pop-up-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+    width: 250px;
+}
+
+.column-pop-up-container h3 {
+    font-weight: bold;
+}
+
+.column-pop-up-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.column-pop-up-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.check-box-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.check-box-container input {
+    cursor: pointer;
+}
+
+.column-pop-up-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column-pop-up-action button:nth-child(1){
+    padding: 5px 10px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    transition: ease 0.3s;
+}
+
+.column-pop-up-action button:nth-child(1):hover{
+    background: black;
+    border: 0.5px solid white;
+    color: white;
+}
+
+.column-pop-up-action button:nth-child(2){
+    padding: 5px 10px;
+    border: 0.5px solid red;
+    border-radius: 5px;
+    transition: ease 0.3s;
+}
+
+.column-pop-up-action button:nth-child(2):hover{
+    background: red;
+    border: 0.5px solid white;
+    color: white;
+}

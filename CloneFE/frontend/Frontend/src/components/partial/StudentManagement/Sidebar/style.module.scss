@@ -1,0 +1,663 @@
+.menuIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.menuWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.homeIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.home1 {
+  position: relative;
+  line-height: 24px;
+}
+.home {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.groupIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.students {
+  position: relative;
+  line-height: 24px;
+}
+.groupParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.naviOpenIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.syllabus1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.arrowForwardIosIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.studentList {
+  position: relative;
+  line-height: 24px;
+}
+.viewSyllabus {
+  align-self: stretch;
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.arrowForwardIosIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.reserveList {
+  width: 88px;
+  border: 0;
+  outline: 0;
+  font-family: var(--caption-1);
+  font-size: var(--button-md-size);
+  background-color: transparent;
+  height: 24px;
+  position: relative;
+  line-height: 24px;
+  color: var(--main);
+  text-align: left;
+  display: inline-block;
+}
+.syllabus,
+.viewSyllabus1 {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.viewSyllabus1 {
+  background-color: var(--color-gray-300);
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+}
+.syllabus {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.filterBarIcon,
+.searchInputIcon {
+  height: 15.8px;
+  width: 8.8px;
+  position: relative;
+}
+.bookOpen {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-11xs);
+  box-sizing: border-box;
+}
+.syllabus4 {
+  position: relative;
+  line-height: 24px;
+}
+.bookOpenParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.naviOpenIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.syllabus3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.arrowForwardIosIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.viewSyllabus3 {
+  position: relative;
+  line-height: 24px;
+}
+.viewSyllabus2 {
+  align-self: stretch;
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.arrowForwardIosIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.createSyllabus1 {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+.createSyllabus,
+.syllabus2 {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.createSyllabus {
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-8xs) var(--padding-21xl) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.syllabus2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.biotechIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.trainingProgram {
+  position: relative;
+  line-height: 24px;
+}
+.biotechParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.naviOpenIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.trainingModule1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.arrowForwardIosIcon4 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.viewProgram {
+  position: relative;
+  line-height: 24px;
+}
+.viewModule {
+  align-self: stretch;
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.arrowForwardIosIcon5 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.createProgram {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+.createModule,
+.trainingModule {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.createModule {
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-8xs) var(--padding-19xl) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.trainingModule {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.schoolIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.class1 {
+  position: relative;
+  line-height: 24px;
+}
+.schoolParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.naviOpenIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.class {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.arrowForwardIosIcon6 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.viewClass1 {
+  position: relative;
+  line-height: 24px;
+}
+.viewClass {
+  align-self: stretch;
+  background-color: var(--color-gray-300);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.arrowForwardIosIcon7 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.createClass1 {
+  position: relative;
+  line-height: 24px;
+}
+.classMaster,
+.createClass {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.createClass {
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.classMaster {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.calendarTodayIcon {
+  height: 21px;
+  width: 21px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.trainingCalendar1 {
+  position: relative;
+  line-height: 24px;
+}
+.calendarTodayParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.naviOpenIcon4 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.trainingCalendar {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.roleIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.userManagement1 {
+  position: relative;
+  line-height: 24px;
+}
+.roleParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.naviOpenIcon5 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.users {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.arrowForwardIosIcon8 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.userList1 {
+  position: relative;
+  line-height: 24px;
+}
+.userList {
+  align-self: stretch;
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.arrowForwardIosIcon9 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.userPermission1 {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+.userManagement,
+.userPermission {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.userPermission {
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-8xs) var(--padding-15xl) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+  white-space: nowrap;
+}
+.userManagement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.folderIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.learningMaterials1 {
+  position: relative;
+  line-height: 24px;
+}
+.folderParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.naviOpenIcon6 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.learningMaterials {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.settingsIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.setting2 {
+  position: relative;
+  line-height: 24px;
+}
+.settingsParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.naviOpenIcon7 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+.setting1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.arrowForwardIosIcon10 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.calendar1 {
+  position: relative;
+  line-height: 24px;
+}
+.calendar,
+.setting,
+.sidebar {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.calendar {
+  background-color: var(--color-gray-300);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-11xl);
+  gap: var(--gap-8xs);
+}
+.setting,
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.sidebar {
+  height: 1115px;
+  background-color: var(--color-aliceblue-100);
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: var(--padding-11xl) var(--padding-xl) 0;
+  box-sizing: border-box;
+  gap: var(--gap-6xl);
+  text-align: left;
+  font-size: var(--button-md-size);
+  color: var(--main);
+  font-family: var(--caption-1);
+}

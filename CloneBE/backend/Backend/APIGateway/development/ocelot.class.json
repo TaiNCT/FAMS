@@ -1,0 +1,549 @@
+{
+    "IdentityServiceUrl": "http://localhost:5000",
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/Class",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class",
+            "UpstreamHttpMethod": [
+                "GET",
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/{classId}/status",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/{classId}/status",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/{keyword}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/{keyword}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/calendar",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/calendar",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/Filter",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/Filter",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/FilterWeek",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/FilterWeek",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/ViewInfo",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/ViewInfo",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/ViewInfoClassDetail",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/ViewInfoClassDetail",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/Week",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/Week",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/Attendee/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/Attendee/{id}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/Time",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/Time",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/ListSyllabusRemaining",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/ListSyllabusRemaining",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/AddTrainingProgramSyllabus",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/AddTrainingProgramSyllabus",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/DuplicatedClass/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/DuplicatedClass/{id}",
+            "UpstreamHttpMethod": [
+                "POST"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/{trainingProgramCode}/{syllabusId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/{trainingProgramCode}/{syllabusId}",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/AddSyllabus",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/AddSyllabus",
+            "UpstreamHttpMethod": [
+                "POST"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/ExpandClass/GetTrainingProgramList",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ExpandClass/GetTrainingProgramList",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/ExpandClass/GetUserBasic",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ExpandClass/GetUserBasic",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/ExpandClass/CreateclassUser",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ExpandClass/CreateclassUser",
+            "UpstreamHttpMethod": [
+                "POST"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/ExpandClass/GetSyllabiByTrainingProgramCode/{trainingProgramCode}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ExpandClass/GetSyllabiByTrainingProgramCode/{trainingProgramCode}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/FSU/GetFSUList",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/FSU/GetFSUList",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/Location/GetLocationList",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Location/GetLocationList",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/AttendeeType/GetAttendeeTypeList",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/AttendeeType/GetAttendeeTypeList",
+            "UpstreamHttpMethod": [
+                "GET"
+            ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": [
+                    "YourApp",
+                    "openid",
+                    "profile"
+                ]
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/trainingProgram/{trainingProgramCode}/syllabuses",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/trainingProgram/{trainingProgramCode}/syllabuses",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class{classId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class{classId}",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/AddUser",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/AddUser",
+            "UpstreamHttpMethod": [
+                "POST"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/{classId}/DeleteUser",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/{classId}/DeleteUser",
+            "UpstreamHttpMethod": [
+                "DELETE"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/ExpandClass/GetAllTrainer",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ExpandClass/GetAllTrainer",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/AttendeeType",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/AttendeeType",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/{classId}/fsu",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/{classId}/fsu",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/{classId}trainingprogram",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/{classId}trainingprogram",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/Class/{classId}/attendeetype",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/Class/{classId}/attendeetype",
+            "UpstreamHttpMethod": [
+                "PUT"
+            ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/ExpandClass/GetClassByUserId?userName={username}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "UpstreamPathTemplate": "/api/ExpandClass/GetClassByUserId?userName={username}",
+            "UpstreamHttpMethod": [
+                "GET"
+            ]
+        }
+    ],
+    "GlobalConfiguration": {}
+}

@@ -1,0 +1,55 @@
+.no-pagination-table .ant-pagination {
+  display: none;
+}
+
+.email-table-remind .ant-pagination-options {
+  float: right;
+}
+
+.email-table-remind .ant-pagination-item {
+  border-radius: 50%;
+  background-color: #e1e9ef;
+  border-color: #e1e9ef !important;
+}
+.email-table-remind .ant-pagination-item a {
+  color: black;
+}
+.email-table-remind .ant-pagination-item-active {
+  background-color: #1c1e21;
+}
+.email-table-remind .ant-pagination-item-active a {
+  color: white;
+}
+.email-table-remind .ant-pagination-options-quick-jumper {
+  display: none;
+}
+
+.email-table-remind .ant-table-tbody .ant-table-cell-name {
+  font-weight: bold;
+}
+
+.email-table-remind .ant-table-tbody .ant-table-row .ant-table-cell {
+  max-width: 300px;
+}
+
+.email-table-remind .ant-pagination-options {
+  display: flex;
+  align-items: center;
+}
+
+.email-table-remind .ant-pagination-options > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+.email-table-remind .ant-pagination-options:before {
+  content: "Row per page";
+  margin-right: 8px;
+}
+
+.email-table-remind .ant-table-container {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25), -4px 0 8px rgba(0, 0, 0, 0.25);
+}
+
+.email-table-remind .ant-table-container {
+  border-radius: 0 0 10px 10px;
+}

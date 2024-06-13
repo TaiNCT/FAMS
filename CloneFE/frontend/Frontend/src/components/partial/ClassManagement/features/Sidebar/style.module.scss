@@ -1,0 +1,707 @@
+.menuIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.menuWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.homeIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.home1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.home {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.groupIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.students {
+  position: relative;
+  line-height: 24px;
+}
+
+.groupParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.naviOpenIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.syllabus1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.reserveList {
+  position: relative;
+  line-height: 24px;
+  margin-left: 22px;
+}
+
+.syllabus,
+.viewSyllabus,
+.viewSyllabus1 {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.viewSyllabus,
+.viewSyllabus1 {
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 5px 5px 30px;
+  gap: 5px;
+}
+
+.syllabus {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.textBlockIcon,
+.vectorIcon {
+  height: 15.8px;
+  width: 8.8px;
+  position: relative;
+}
+
+.bookOpen {
+  height: 24px;
+  width: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+.syllabus4 {
+  position: relative;
+  line-height: 24px;
+}
+
+.bookOpenParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.naviOpenIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.syllabus3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.arrowForwardIosIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.viewSyllabus3 {
+  position: relative;
+  line-height: 24px;
+}
+
+.viewSyllabus2 {
+  align-self: stretch;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 5px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.arrowForwardIosIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.createSyllabus1 {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+
+.createSyllabus,
+.syllabus2 {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+
+.createSyllabus {
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 40px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.syllabus2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.biotechIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.trainingProgram {
+  position: relative;
+  line-height: 24px;
+}
+
+.biotechParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.naviOpenIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.trainingModule1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.arrowForwardIosIcon4 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.viewProgram {
+  position: relative;
+  line-height: 24px;
+}
+
+.viewModule {
+  align-self: stretch;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 5px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.arrowForwardIosIcon5 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.createProgram {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+
+.createModule,
+.trainingModule {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+
+.createModule {
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 38px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.trainingModule {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.schoolIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.class1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.schoolParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.naviOpenIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.class {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.arrowForwardIosIcon6 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.viewClass1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.viewClass {
+  align-self: stretch;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 5px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.arrowForwardIosIcon7 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.createClass1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.classMaster,
+.createClass {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+
+.createClass {
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 5px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.classMaster {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.calendarTodayIcon {
+  height: 21px;
+  width: 21px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.trainingCalendar1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.calendarTodayParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.naviOpenIcon4 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.trainingCalendar {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.roleIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.userManagement1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.roleParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.naviOpenIcon5 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.users {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.arrowForwardIosIcon8 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.userList1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.userList {
+  align-self: stretch;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 5px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.arrowForwardIosIcon9 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.userPermission1 {
+  flex: 1;
+  position: relative;
+  line-height: 24px;
+}
+
+.userManagement,
+.userPermission {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+
+.userPermission {
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px 34px 5px 30px;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+.userManagement {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.folderIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.learningMaterials1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.folderParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.naviOpenIcon6 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.learningMaterials {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.settingsIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+
+.setting2 {
+  position: relative;
+  line-height: 24px;
+}
+
+.settingsParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.naviOpenIcon7 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: contain;
+  min-height: 24px;
+}
+
+.setting1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.arrowForwardIosIcon10 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.calendar1 {
+  position: relative;
+  line-height: 24px;
+}
+
+.calendar {
+  align-self: stretch;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 5px 5px 30px;
+  gap: 5px;
+}
+
+.setting,
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.setting {
+  align-self: stretch;
+  gap: 8px;
+}
+
+.sidebar {
+  height: 100%;
+  width: 256px;
+  background-color: #edf2f7;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: 30px 20px 0;
+  box-sizing: border-box;
+  gap: 25px;
+  text-align: left;
+  font-size: 16px;
+  color: #2d3748;
+  font-family: Inter;
+}
+
+@media screen and (max-width: 1050px) {
+  .sidebar {
+    display: none;
+  }
+}

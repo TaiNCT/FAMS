@@ -1,0 +1,576 @@
+{
+  //(!!!!!!!MUST READ) How to use 
+  //Define Routers:
+  //   "Routes": Define the routers
+  //   A router starts with { and }.
+  //   DownstreamPathTemplate: The actual route to a specific controller in your application.
+  //   DownstreamScheme: The protocol of the router (https, http).
+  //   Host: Your host IP address (use "localhost" for your current IP).
+  //   Port: Port number.
+  //   UpstreamPathTemplate: Define the router that the API gateway will catch and forward to your specified “DownstreamPathTemplate”.
+  //   UpstreamHttpMethod: Define the method of your router .EX: "UpstreamHttpMethod": [ "GET","POST","PUT" ]
+  //   After configuration, start your application, make sure your server API works and start the this API Gateway then access Gateway's API "http://localhost:5032/{yourUpstreamPathTemplate}" for testing
+  //   To use: Forward your request after configuration in your FE( Replace old router with new defined router)
+  //   May be blocked by cors policies, go to this Program.cs and add your FE port in policy.WithOrigin
+  "IdentityServiceUrl": "http://localhost:5000",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/connect/token",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/identity",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms/{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms/{params}",
+      "UpstreamHttpMethod": [ "GET", "DELETE", "PATCH", "PUT", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    //--ScoreManagement routers
+    //Get all student router
+    {
+      "DownstreamPathTemplate": "/api/students/all",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/students",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+
+    //Update student by id router
+    {
+      "DownstreamPathTemplate": "/api/students/update/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/Updatestudent/{id}",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+
+    //Get student by id router
+    {
+      "DownstreamPathTemplate": "/api/students/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/student/{id}",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+
+    //Update student by id router
+    {
+      "DownstreamPathTemplate": "/api/cert/update/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/updateCert/{id}",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    //Get student Cert by id router
+    {
+      "DownstreamPathTemplate": "/api/cert/get/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/getCert/{id}",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    //Import exel router
+    {
+      "DownstreamPathTemplate": "/api/ImportExcelScore",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/ImportExcel",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    //Get all student with their Score router
+    {
+      "DownstreamPathTemplate": "/api/Score",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/getAllScores",
+      "UpstreamHttpMethod": [ "GET" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    //Get student with their Score by id router
+    {
+      "DownstreamPathTemplate": "/api/Score/{StudentId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/getScore/{StudentId}",
+      "UpstreamHttpMethod": [ "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    //Update the student score by id router
+    {
+      "DownstreamPathTemplate": "/api/ScoreUpdate/update/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5271
+        }
+      ],
+      "UpstreamPathTemplate": "/updateStudentScore/{id}",
+      "UpstreamHttpMethod": [ "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    }
+  ],
+  //Nhom Lam
+  //Get All Student
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/GetAllStudents",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/GetAllStudents",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  //Get List student by class
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/GetStudentsInclass",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/GetStudentsInclass",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  //Get List Class Student not in
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/GetListClassStudentNotIn",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/GetListClassStudentNotIn",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+
+  //Get List Class Information of a student
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/GetListClassInfor",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/GetListClassInfor",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  //Export List Student in a class
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/ExportStudentList",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/ExportStudentList",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  //Add New Student Class Infor
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/AddNewStudentClassInfor",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/AddNewStudentClassInfor",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  //Import Student List
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/UploadExcelFile",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/UploadExcelFile",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  //Delete Student
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/delete/{studentId}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/delete/{studentId}",
+    "UpstreamHttpMethod": [ "DELETE" ]
+  },
+  //Get Major by Major Id
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/GetMajor/{majorId}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/GetMajor/{majorId}",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  //Update Student status in batch
+  {
+    "DownstreamPathTemplate": "/api/StudentAPI/udpate-status",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5031
+      }
+    ],
+    "UpstreamPathTemplate": "/StudentAPI/update-status",
+    "UpstreamHttpMethod": [ "POST" ]
+  }
+  //Nhom Nguyen
+  ,
+  {
+    "DownstreamPathTemplate": "/api/login",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/login",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/role-perms",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/role-perms",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/get-perms",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/get-perms",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/update-role-perms",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/update-role-perms",
+    "UpstreamHttpMethod": [ "PUT" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/get-role",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/get-role",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/search-user",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/search-user",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/create-user",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/create-user",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/check-mail",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/check-mail",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/check-username",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/check-username",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/CheckPhone",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/CheckPhone",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/update-user",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/update-user",
+    "UpstreamHttpMethod": [ "PUT" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/change-role",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/change-role",
+    "UpstreamHttpMethod": [ "PUT" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/change-status",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/change-status",
+    "UpstreamHttpMethod": [ "PUT" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/filter-user/{sortBy}",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/filter-user/{sortBy}",
+    "UpstreamHttpMethod": [ "GET" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/sync-to-elasticsearch",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/sync-to-elasticsearch",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  {
+    "DownstreamPathTemplate": "/api/import-user",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 7242
+      }
+    ],
+    "UpstreamPathTemplate": "/api/import-user",
+    "UpstreamHttpMethod": [ "POST" ]
+  },
+  //Nhom Tien
+  //Get All Email Template List
+  {
+    "DownstreamPathTemplate": "/api/emailTemplates/list",
+    "DownstreamScheme": "http",
+    "DownstreamHostAndPorts": [
+      {
+        "Host": "localhost",
+        "Port": 5110
+      }
+    ],
+    "UpstreamPathTemplate": "/api/emailTemplates/list",
+    "UpstreamHttpMethod": [ "GET" ],
+    "AuthenticationOptions": {
+      "AuthenticationProviderKey": "Bearer",
+      "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+    }
+  },
+  "GlobalConfiguration": {}
+}

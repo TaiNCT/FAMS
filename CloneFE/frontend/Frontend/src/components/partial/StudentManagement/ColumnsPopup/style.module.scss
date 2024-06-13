@@ -1,0 +1,663 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto-caption-1:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+.selectColumns {
+  width: 119px;
+  position: relative;
+  display: inline-block;
+  padding-right: 20px;
+}
+.frameRoot {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.checkLabelDragIndicator {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+}
+
+.checkLabelDragIndicator:checked {
+  accent-color: #2d3748;
+}
+
+.label {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.frameChild {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  margin: 0 !important;
+  top: 6px;
+  left: 6px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.rectangleParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label1 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon1 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput1 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.frameItem {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  margin: 0 !important;
+  top: 6px;
+  left: 6px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.rectangleGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label2 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon2 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput2 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.glyphCheck1 {
+  margin: 0 !important;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.rectangleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label3 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon3 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox3 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput3 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.glyphCheck2 {
+  margin: 0 !important;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.frameDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label4 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon4 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox4 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput4 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.frameInner {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  margin: 0 !important;
+  top: 6px;
+  left: 6px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.rectangleParent1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label5 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon5 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox5 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput5 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.glyphCheck3 {
+  margin: 0 !important;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.rectangleParent2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label6 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon6 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox6 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput6 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.glyphCheck4 {
+  margin: 0 !important;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.rectangleParent3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label7 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox7 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon7 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox7 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput7 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.glyphCheck5 {
+  margin: 0 !important;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.rectangleParent4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label8 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox8 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon8 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox8 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput8 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.glyphCheck6 {
+  margin: 0 !important;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.rectangleParent5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label9 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox9 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon9 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox9 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rectangleInput9 {
+  margin: 0;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  border-radius: 0px;
+}
+.rectangleDiv {
+  height: 12px;
+  width: 12px;
+  position: absolute;
+  margin: 0 !important;
+  top: 6px;
+  left: 6px;
+  background-color: #ffffff;
+  z-index: 1;
+}
+.rectangleParent6 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px;
+  position: relative;
+}
+.label10 {
+  position: relative;
+  line-height: 22px;
+}
+.ddCheckbox10 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.dragIndicatorIcon10 {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 24px;
+}
+.dDcheckbox10,
+.dDcheckboxFrame {
+  display: flex;
+  align-items: flex-start;
+}
+.dDcheckbox10 {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dDcheckboxFrame {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.frameChild1 {
+  height: 120px;
+  width: 4px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.dDcheckboxFrameParent {
+  align-self: stretch;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  text-align: left;
+}
+.buttonLabel {
+  position: relative;
+  color: #2d3748;
+  text-align: center;
+}
+.ddButton {
+  cursor: pointer;
+  border: 1px solid #2d3748;
+  padding: 9px 8px 8px;
+  background-color: transparent;
+  flex: 1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.buttonLabel1 {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+.ddButton1 {
+  cursor: pointer;
+  border: 0;
+  padding: 9px 37px 8px 36px;
+  background-color: #2d3748;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.columns,
+.frameDDButton {
+  display: flex;
+  justify-content: flex-start;
+}
+.frameDDButton {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.columns {
+  position: fixed;
+  top: 50%; /* Position the top of the modal at 50% from the top of the viewport */
+  left: 50%; /* Position the left side of the modal at 50% from the left of the viewport */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Translate the modal back by half of its own width and height */
+  width: 266px;
+  border-radius: 8px;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 16px 25px;
+  box-sizing: border-box;
+  gap: 24px;
+  text-align: left;
+  color: #000;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05),
+    0px 0px 1px 0px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

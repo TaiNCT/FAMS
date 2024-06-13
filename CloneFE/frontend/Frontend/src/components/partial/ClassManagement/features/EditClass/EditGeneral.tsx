@@ -1,0 +1,219 @@
+import React, { useState } from "react";
+import Collapse from "@/components/global/Collapse";
+import { formatDate } from "@/utils/DateUtils";
+import CalendarTodayIcon from "@/assets/icons/nav-menu-icons/CalendarTodayIcon";
+import AlarmIcon from "@/assets/icons/other-icons/AlarmIcon";
+import DomainIcon from "@/assets/icons/other-icons/DomainIcon";
+import LectureIcon from "@/assets/icons/delivery-types-icons/LectureIcon";
+import GradeIcon from "@/assets/icons/indicator-icons/GradeIcon";
+import SupplierIcon from "@/assets/icons/indicator-icons/SupplierIcon";
+import { useAppSelector } from "@/hooks/useRedux";
+import { Form, Select, TimePicker } from "antd";
+import dayjs from "dayjs";
+import { RootState } from "@/lib/redux/store";
+const { Option } = Select;
+// const data = {
+//   classTime: "09:00 - 12:00",
+//   locations: ["Ftown2", "Ftown1"],
+//   trainers: [
+//     {
+//       id: 1,
+//       name: "Dinh Vu Quoc Trung",
+//       profileURL: "https://www.google.com",
+//     },
+//     {
+//       id: 2,
+//       name: "Ba Chu Heo",
+//       profileURL: "https://www.google.com",
+//     },
+//     {
+//       id: 3,
+//       name: "Hu Cheo Ba",
+//       profileURL: "https://www.google.com",
+//     },
+//     {
+//       id: 4,
+//       name: "Tap The Lop",
+//       profileURL: "https://www.google.com",
+//     },
+//   ],
+//   admins: [
+//     {
+//       id: 1,
+//       name: "Ly Lien Lien Dung",
+//       profileURL: "https://www.google.com",
+//     },
+//     {
+//       id: 2,
+//       name: "Dung Lien Lien Ly",
+//       profileURL: "https://www.google.com",
+//     },
+//   ],
+//   FSU: {
+//     name: "FHM",
+//     contact: "BaCH@fsoft.com.vn",
+//   },
+//   createdAt: "2022-03-25",
+//   createdBy: "DanPL",
+//   reviewedAt: "2022-03-30",
+//   reviewedBy: "TrungDVQ",
+//   approvedAt: "2022-03-02",
+//   approvedBy: "VongNT",
+// };
+function convertTime(time: string) {
+  var parts = time.split(":");
+  var hours = parts[0];
+  var minutes = parts[1];
+
+  return hours + ":" + minutes;
+}
+
+const EditGeneral = ({ ...props }: React.HTMLAttributes<HTMLDivElement>) => {
+  const [general, setGeneral] = useState<any | null>({});
+  const [isLoading, setIsLoading] = useState(false);
+
+  if (isLoading) {
+    return <>...Loading</>;
+  }
+  const data = useAppSelector((state: RootState) => state.class.data);
+  const admins = useAppSelector((state: RootState) => state.user.admins);
+  const fsus = useAppSelector((state: RootState) => state.fsu.fsus);
+  const initialAdminId = data.users.find(
+    (user: any) => user.roleName == "Admin"
+  )?.userId;
+  if (!data) return;
+  return (
+    <Collapse icon={<CalendarTodayIcon />} title="General" {...props}>
+      {/* CLASS TIME */}
+      <div className="p-5">
+        <div className="grid grid-cols-3">
+          <div className="col-span-1  font-bold">
+            <div className="flex items-center">
+              <AlarmIcon className="mr-2 text-blue-700" /> Class time
+            </div>
+          </div>
+          <div className="col-span-2">
+            <Form.Item
+              name="durationTime"
+              noStyle
+              initialValue={[
+                dayjs(data.startTime, "HH:mm:ss"),
+                dayjs(data.endTime, "HH:mm:ss"),
+              ]}
+            >
+              <TimePicker.RangePicker
+                format="HH:mm"
+                disabledTime={() => ({
+                  disabledHours: () => {
+                    return [
+                      ...Array(8).keys(),
+                      ...Array.from({ length: 2 }, (_, i) => i + 23),
+                    ];
+                  },
+                  disabledMinutes: () => {
+                    return Array.from({ length: 60 }, (_, i) => i).filter(
+                      (i) => i % 30 !== 0
+                    );
+                  },
+                })}
+                hideDisabledOptions
+              />
+            </Form.Item>
+          </div>
+        </div>
+        {/* LOCATION */}
+        <div className="grid grid-cols-3 py-3">
+          <div className="col-span-1 font-bold">
+            <div className="flex items-center">
+              <DomainIcon className="mr-2 text-blue-700" /> location
+            </div>
+          </div>
+          <div className="col-span-2 flex flex-col gap-2"></div>
+        </div>
+        {/* TRAINER */}
+        <div className="grid grid-cols-3 py-3">
+          <div className="col-span-1 font-bold">
+            <div className="flex items-center">
+              <LectureIcon className="mr-2 text-blue-700" /> Trainer
+            </div>
+          </div>
+        </div>
+        {/* ADMIN */}
+        <div className="grid grid-cols-3 py-3">
+          <div className="col-span-1 font-bold">
+            <div className="flex items-center">
+              <GradeIcon className="mr-2 text-blue-700" /> Admin
+            </div>
+          </div>
+          <div className="col-span-2 flex flex-col gap-2">
+            <Form.Item name="adminId" noStyle initialValue={initialAdminId}>
+              <Select placeholder="Select admin" allowClear>
+                {admins?.map((admin: any, index: number) => {
+                  return (
+                    <Option value={admin.userId} key={`admin-${index}`}>
+                      {admin.fullName}
+                    </Option>
+                  );
+                })}
+              </Select>
+            </Form.Item>
+          </div>
+        </div>
+      </div>
+      {/* FSU */}
+      <div className="p-5">
+        <div className="grid grid-cols-3">
+          <div className="col-span-1  font-bold">
+            <div className="flex items-center">
+              <SupplierIcon className="mr-2 text-blue-700" /> FSU
+            </div>
+          </div>
+          <div className="col-span-2 flex flex-col gap-2">
+            <Form.Item name="fsu" noStyle initialValue={data.fsu.fsuId}>
+              <Select placeholder="Select FSU" allowClear>
+                {fsus?.map((fsu: any, index: number) => {
+                  return (
+                    <Option value={fsu.fsuId} key={`fsu-${index}`}>
+                      {fsu.name} - {fsu.email}
+                    </Option>
+                  );
+                })}
+              </Select>
+            </Form.Item>
+          </div>
+        </div>
+
+        <div className="border-b border-b-black my-3" />
+        {/* CREATED */}
+        <div className="grid grid-cols-3 my-2">
+          <div className="col-span-1  font-bold">Created</div>
+          <div className="col-span-2">
+            <div>
+              {formatDate(new Date(data.createdDate))} by {data.createdBy}
+            </div>
+          </div>
+        </div>
+        {/* REVIEW */}
+        <div className="grid grid-cols-3 my-2">
+          <div className="col-span-1  font-bold">Review</div>
+          <div className="col-span-2">
+            <div>
+              {formatDate(new Date(data.reviewDate))} by {data.reviewBy}
+            </div>
+          </div>
+        </div>
+        {/* APPROVE */}
+        <div className="grid grid-cols-3 my-2">
+          <div className="col-span-1  font-bold">Approve</div>
+          <div className="col-span-2">
+            <div>
+              {formatDate(new Date(data.approvedDate))} by {data.approvedBy}
+            </div>
+          </div>
+        </div>
+      </div>
+    </Collapse>
+  );
+};
+
+export default EditGeneral;

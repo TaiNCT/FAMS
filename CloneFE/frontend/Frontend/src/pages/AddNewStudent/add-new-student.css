@@ -1,0 +1,131 @@
+.add-student-header {
+    background: #2d3748 !important;
+    padding: 10px !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+    margin-top: 3px;
+}
+
+.add-student-main {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.add-student-container {
+    padding: 20px !important;
+}
+
+.add-student-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 7px !important;
+}
+
+.add-student-inner h2 {
+    background: #8b8b8b !important;
+    color: #ffffff !important;
+    padding: 5px !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+.add-student-attribute-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+}
+
+.add-student-attribute {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+.add-student-attribute div {
+    font-weight: bold !important;
+    font-size: 17px !important;
+    padding: 3px !important;
+    width: 150px !important;
+}
+
+.add-student-attribute span {
+    margin-left: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.add-student-attribute select {
+    border: 0.5px solid black !important;
+    padding: 5px !important;
+    border-radius: 7px !important;
+    width: 350px !important;
+}
+
+.add-student-dropdown option {
+    padding: 10px !important;
+    height: 100px !important;
+    color: black !important;
+}
+
+.add-student-attribute input {
+    border: 0.5px solid black !important;
+    border-radius: 5px !important;
+    padding: 5px !important;
+    width: 350px !important;
+}
+
+.add-student-action {
+    padding: 15px !important;
+    display: flex !important;
+    gap: 10px !important;
+}
+
+.add-student-action button:nth-of-type(1) {
+    color: green !important;
+    border: 0.5px solid green !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    width: 100px !important; 
+    transition: ease 0.3s !important;
+}
+
+.add-student-action button:nth-of-type(1):hover {
+    color: white !important;
+    background: green !important;
+}
+
+.add-student-action button:nth-of-type(2) {
+    color: black !important;
+    border: 0.5px solid black !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    width: 100px !important;
+    transition: ease 0.3s !important;
+}
+
+.add-student-action button:nth-of-type(2):hover {
+    color: white !important;
+    background: black !important;
+}
+
+.add-student-action a button {
+    color: red !important;
+    border: 0.5px solid red !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    width: 100px !important;
+    transition: ease 0.3s !important;
+}
+
+.add-student-action a button:hover {
+    color: white !important;
+    background: red !important;
+}
+
+.add-student-error-message {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}

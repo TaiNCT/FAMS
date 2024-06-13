@@ -1,0 +1,80 @@
+.container {
+    width: 50%;
+    margin: 0 auto; /* Center the container horizontally */
+    /* Add other styles as needed */
+    position: fixed;
+    top: 4%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.headerContent {
+    color: white;
+    background-color: #2D3748;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 0;
+    display: flex;
+
+    .headerTitle {
+        width: 97%;
+        text-align: center;
+    }
+
+    .cancelButton {
+        margin-left: -10px;
+    }
+}
+
+.partTitle {
+    font-weight: 600;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.classItem {
+    width: 100%;
+    margin-left: 40px;
+    .smallPartTitle {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    input[type="text"] {
+        width: 82%;
+        background-color:	#EDF2F7;
+        height: 35px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        padding: 0 20px ;
+        opacity: 0.9;
+    }
+    label{
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.btn {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    .btnCancel {
+        color: red;
+        text-decoration: underline;
+        margin-right: 20px;
+        font-weight: 600;
+        margin-left: 250px;
+    }
+    .btnBackToClass {
+        background-color: #2D3748;
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 5px 30px;
+        border-radius: 10px;
+    }
+}

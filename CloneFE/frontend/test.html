@@ -1,0 +1,119 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<style>
+			.mailbody {
+				box-sizing: border-box;
+				flex: 1;
+				max-width: 1000px;
+				white-space: pre-wrap;
+				overflow: auto;
+			}
+			.mailbody > section {
+				padding-left: 0.2em;
+				padding-right: 0.2em;
+			}
+			.mailbody > section > div:first-child {
+				margin-bottom: 0.8em;
+				display: flex;
+			}
+			.mailbody > section > div:first-child h1 {
+				font-size: 1.1em;
+				font-weight: 700;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			.ok {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				margin-left: 0.6em;
+				scale: 0.9;
+				background-color: #2f903f;
+				padding: 4px;
+				padding-left: 10px;
+				padding-right: 10px;
+				color: #fff;
+				border-radius: 15px;
+			}
+			.ok::before {
+				content: "Passed";
+			}
+			.error {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				margin-left: 0.6em;
+				scale: 0.9;
+				background-color: tomato;
+				padding: 4px;
+				padding-left: 10px;
+				padding-right: 10px;
+				color: #fff;
+				border-radius: 15px;
+			}
+			.error::before {
+				content: "Passed";
+			}
+			.error::before {
+				content: "Failed" !important;
+			}
+			.mailcard {
+				display: flex;
+				box-sizing: border-box;
+				align-items: flex-start;
+				gap: 1em;
+			}
+			.card {
+				height: auto !important;
+				border-radius: 10px;
+				overflow: hidden;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				box-sizing: border-box;
+				box-shadow: 0 2px 4px #0000004d;
+			}
+			.card > h1 {
+				min-height: 2.5em;
+				padding: 0.5em;
+				font-size: 1em;
+				background-color: #2d3748;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				text-align: center;
+				color: #fff;
+				margin: 0;
+			}
+			.card > div {
+				display: flex;
+				justify-content: space-between;
+				padding: 1em;
+				background-color: #edf2f7;
+			}
+			.card > div label {
+				font-size: 1em;
+			}
+			.card > div label:last-child {
+				font-weight: 700;
+				font-size: 1.1em;
+			}
+			.card [class^="_ave_"] {
+				background-color: #dfdede;
+			}
+			.card [class^="_ave_"] label {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.mock h1 {
+				background-color: #d45b13 !important;
+			}
+		</style>
+	</head>
+	<body>
+		${outerHTML}
+	</body>
+</html>

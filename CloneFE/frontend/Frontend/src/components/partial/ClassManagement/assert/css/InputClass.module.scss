@@ -1,0 +1,21 @@
+.formContainer {
+  display: flex;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 26px;
+  .formControl {
+    div {
+      border-radius: 10px !important;
+      width: 20rem;
+    }
+    input {
+      height: 0.4375em;
+      width: 100%;
+      color: #000000;
+      padding-left: 10px;
+      font-weight: bold;
+      font-style: italic;
+      border: none;
+    }
+  }
+}

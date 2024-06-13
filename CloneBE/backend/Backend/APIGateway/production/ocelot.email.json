@@ -1,0 +1,294 @@
+{
+  "IdentityServiceUrl": "http://identity-svc",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/emailsend/change-status",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailsend/change-status",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/template/get/{param}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/template/get/{param}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/EmailGetUser/get/{param}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/EmailGetUser/get/{param}",
+      "UpstreamHttpMethod": ["GET", "POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailsend/emailsendlist",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailsend/emailsendlist",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailsend/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailsend/{id}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailsend/edit",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailsend/edit",
+      "UpstreamHttpMethod": ["GET", "POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailsend/create",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailsend/create",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailTemplates/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailTemplates/{id}",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailTemplates/add",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailTemplates/add",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailTemplates/list",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailTemplates/list",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Log",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Log",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Import/emailtemplates/import",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Import/emailtemplates/import",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailTemplates/list{param}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailTemplates/list{param}",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/emailTemplates/edit/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/emailTemplates/edit/{id}",
+      "UpstreamHttpMethod": ["PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Export/emailtemplates",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Export/emailtemplates",
+      "UpstreamHttpMethod": ["GET"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/SearchTemplate",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/SearchTemplate",
+      "UpstreamHttpMethod": ["GET", "POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Send/schedule/email",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Send/schedule/email",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Send/email",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "email-svc",
+          "Port": 5004
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Send/email",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

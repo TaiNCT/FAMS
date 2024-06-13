@@ -1,0 +1,19 @@
+// using Microsoft.EntityFrameworkCore;
+// using Microsoft.EntityFrameworkCore.Metadata.Builders;
+// using Microsoft.Extensions.Hosting;
+// using ScoreManagementAPI.Models;
+
+// namespace ScoreManagementAPI.Data.Config;
+
+// public class StudentConfiguration : IEntityTypeConfiguration<Student>
+// {
+//     public void Configure(EntityTypeBuilder<Student> builder)
+//     {
+//         builder.HasData(
+//             new Student { Id = 1, University = "Greenwich", Type = 11, Status = true, Location = "Ho Chi Minh city", Major = 1, Phone = "111-111-423", Address = "Example address 1", Area = "Ben Thanh", Dob = DateTime.Now, Email = "vinh@fpt.edu.vn", Faaccount = "DTVinh12223", FullName = "Đinh Thế Vinh", Gender = 1, Gpa = 88, GraduatedDate = DateTime.Now, JoinedDate = DateTime.Now, PermanentResidence = "Vietnam, Ho Chi Minh city", Recer = "Ho Hai Quang", },
+//             new Student { Id = 2, University = "FPT", Type = 23, Status = true, Location = "Ho Chi Minh city", Major = 1, Phone = "111-111-123", Address = "Example address 2", Area = "Area 51", Dob = DateTime.Now, Email = "vinh@fpt.edu.vn", Faaccount = "HHSon2k1", FullName = "Hoàng Hải Sơn", Gender = 1, Gpa = 88, GraduatedDate = DateTime.Now, JoinedDate = DateTime.Now, PermanentResidence = "Vietnam, Ho Chi Minh city", Recer = "Ho Hai Quang", },
+//             new Student { Id = 3, University = "RMIT", Type = 41, Status = false, Location = "Ha Noi", Major = 1, Phone = "111-111-33", Address = "Example address 3", Area = "Vietnam", Dob = DateTime.Now, Email = "vinh@fpt.edu.vn", Faaccount = "DungNQ111", FullName = "Nguyễn Quang Dũng", Gender = 1, Gpa = 88, GraduatedDate = DateTime.Now, JoinedDate = DateTime.Now, PermanentResidence = "Vietnam, Ha Noi", Recer = "Ho Hai Quang", },
+//             new Student { Id = 4, University = "Hutech", Type = 2, Status = true, Location = "New York", Major = 1, Phone = "111-111-2411", Address = "Example address 4", Area = "Huston", Dob = DateTime.Now, Email = "vinh@fpt.edu.vn", Faaccount = "CarmOD1k9", FullName = "Carmila Odesn", Gender = 1, Gpa = 88, GraduatedDate = DateTime.Now, JoinedDate = DateTime.Now, PermanentResidence = "United States", Recer = "Ho Hai Quang" }
+//         );
+//     }
+// }

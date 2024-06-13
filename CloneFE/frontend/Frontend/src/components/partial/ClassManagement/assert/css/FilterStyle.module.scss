@@ -1,0 +1,36 @@
+.form_body {
+    width: 850px;
+    height: 450px;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px 20px 10px;
+    background: white;
+    border-radius: 20px;
+}
+
+.style_popover {
+    background-color: none;
+}
+
+.fromDate_title, .selectName {
+    color: "#2D3748";
+    font-size: 14;
+    font-family: "Inter";
+    font-weight: 700;
+    word-wrap: break-word;
+    margin-left: 10px;
+}
+
+.checkbox_title {
+    color: "#2D3748";
+    font-size: 14;
+    font-family: "Inter";
+    font-weight: 700;
+    word-wrap: break-word;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.checkbox_classtime {
+    margin-top: 10px;
+    margin-left: 30px;
+}

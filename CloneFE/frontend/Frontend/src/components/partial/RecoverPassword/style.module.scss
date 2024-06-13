@@ -1,0 +1,138 @@
+:root {
+  --navbar-height: 60px;
+  --footer-height: 105px;
+}
+
+.background {
+  background-image: url("./images/login-background.jpg");
+  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.rt-login {
+  margin-top: 20px;
+  text-align: center; 
+  width: 100%; 
+}
+
+.rt-login :hover {
+  text-decoration: underline;
+}
+
+.contact {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recover {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 43px;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.recoverblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-email {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.button-resetpass {
+  padding: 10px;
+  border: 1px;
+  border-radius: 10px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  margin: auto;
+}
+
+.button-resetpass:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.input-email {
+  width: 100%;
+  padding: 8px 12px; 
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-code {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.button-resend {
+  background-color: transparent; 
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.button-resend:disabled {
+  color: #a8a8a8;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.rt-login > button:disabled {
+  background-color: #eaeaea;
+  color: #a8a8a8;
+  border-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.password-error {
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 5px; 
+}
+
+.input-new-password, .input-confirm-password {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

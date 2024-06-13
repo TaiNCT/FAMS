@@ -1,0 +1,48 @@
+{
+   "IdentityServiceUrl": "http://localhost:5000",
+   "Routes": [
+      {
+         "DownstreamPathTemplate": "/connect/token",
+         "DownstreamScheme": "http",
+         "DownstreamHostAndPorts": [
+             {
+                 "Host": "localhost",
+                 "Port": 5000
+             }
+         ],
+         "UpstreamPathTemplate": "/connect/token",
+         "UpstreamHttpMethod": [
+             "POST"
+         ]
+     },
+     {
+        "DownstreamPathTemplate": "/api/identity/validate-token",
+        "DownstreamScheme": "http",
+        "DownstreamHostAndPorts": [
+            {
+                "Host": "localhost",
+                "Port": 5000
+            }
+        ],
+        "UpstreamPathTemplate": "/api/identity/validate-token",
+        "UpstreamHttpMethod": [
+            "POST"
+        ]
+    },
+     {
+         "DownstreamPathTemplate": "/api/identity",
+         "DownstreamScheme": "http",
+         "DownstreamHostAndPorts": [
+             {
+                 "Host": "localhost",
+                 "Port": 5000
+             }
+         ],
+         "UpstreamPathTemplate": "/api/identity",
+         "UpstreamHttpMethod": [
+             "POST"
+         ]
+     }
+   ],
+   "GlobalConfiguration": {}
+}

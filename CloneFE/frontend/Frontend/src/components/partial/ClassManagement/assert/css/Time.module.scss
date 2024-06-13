@@ -1,0 +1,23 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 1;
+  transition: opacity 500ms ease;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  width: 100%;
+}
+.TimePicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.background {
+  background-color: white;
+  border: 1px solid #d8d8d8;
+  border-radius: 0px 0px 10px 10px;
+}

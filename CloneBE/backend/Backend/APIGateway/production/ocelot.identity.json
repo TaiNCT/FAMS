@@ -1,0 +1,46 @@
+{
+  "IdentityServiceUrl": "http://identity-svc",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity-svc",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/connect/token",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/identity",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity-svc",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity",
+      "UpstreamHttpMethod": ["POST"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/identity/validate-token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity-svc",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity/validate-token",
+      "UpstreamHttpMethod": ["POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

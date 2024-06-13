@@ -1,0 +1,85 @@
+.th {
+  width: 100%;
+  background-color: #2d3748;
+  padding: 8px 8px 8px 8px;
+  color: #fff;
+  // border-radius: 10px;
+
+  > tr:nth-child(1) {
+    th:nth-child(1) {
+      border-top-left-radius: 20px;
+    }
+
+    th:nth-last-child(1) {
+      border-top-right-radius: 20px;
+    }
+  }
+}
+
+.selectNotiContainer {
+  box-sizing: border-box;
+  padding: 20px 0;
+  text-align: center;
+  color: black;
+
+  button {
+    color: blue;
+  }
+}
+
+.status {
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.InClass {
+  background-color: #2d3748;
+}
+
+.DropOut {
+  background-color: red;
+}
+
+.Reserve {
+  background-color: orange;
+}
+
+.Finish {
+  background-color: #2f903f;
+}
+
+.tr {
+  width: 155px;
+  max-width: 155px;
+  min-width: 155px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.trButton {
+  width: 60px;
+  max-width: 60px;
+  min-width: 60px;
+}
+
+.tableFooter {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 100px 0;
+}
+
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+  background-color: black;
+}
+
+.loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 0 auto;
+}

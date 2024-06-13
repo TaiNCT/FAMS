@@ -1,0 +1,544 @@
+﻿
+using ExcelDataReader;
+using ScoreManagementAPI.Context;
+using ScoreManagementAPI.DTO;
+using ScoreManagementAPI.Models;
+using System.Data;
+using System.Reflection;
+using System.Text;
+
+namespace ScoreManagementAPI.DAO
+{
+    public class ImportExcelScoreDAO
+    {
+
+        private readonly FamsContext _context;
+        public ImportExcelScoreDAO(FamsContext context)
+        {
+            _context = context;
+        }
+
+        public ImportExcelScoreResponse AddExcelWithListScore(ImportExcelScoreRequest request, Stream stream, string option)
+        {
+            ImportExcelScoreResponse response = new ImportExcelScoreResponse() { IsSuccess = true, Message = "Successful" };
+
+            try
+            {
+                List<ScoreFromExcelDTO> _scoreFromExcelDTOs = GetListFromExcel(request, stream);
+                var duplicateAccounts = _scoreFromExcelDTOs.Select(dto => dto.FAAccount).GroupBy(account => account).Where(group => group.Count() > 1).Select(group => group.Key).ToList();
+                if (duplicateAccounts.Any())
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Duplicate accounts found in the Excel file ! ";
+                    return response;
+                }
+
+                if (_scoreFromExcelDTOs.Count == 0)
+                {
+                    response.IsSuccess = false;
+                    response.Message = "No data found in the Excel file.";
+                    return response;
+                }
+
+                var studentIds = _scoreFromExcelDTOs.Select(dto => GetFromAccountToStudentId(dto.FAAccount)).ToList();
+                var moduleIds = _scoreFromExcelDTOs.Select(dto => GetFromModuleNameToModuleId(dto.ModuleName)).ToList();
+                var quizIds = _scoreFromExcelDTOs.SelectMany(dto => dto.ListQuizScore.Keys.Select(quizName => GetFromQuizNameToQuizId(quizName, GetFromModuleNameToModuleId(dto.ModuleName)))).ToList();
+                var assignmentIds = _scoreFromExcelDTOs.SelectMany(dto => dto.ListAssignmentScore.Keys.Select(assignmentName => GetFromAssignmentNameToAssignmentId(assignmentName, GetFromModuleNameToModuleId(dto.ModuleName)))).ToList();
+
+                var duplicateModules = studentIds.Zip(moduleIds, (sId, mId) => IsModuleDuplicate(sId, mId)).ToList();
+                var duplicateQuizzes = studentIds.Zip(quizIds, (sId, qId) => IsQuizDuplicate(sId, qId)).ToList();
+                var duplicateAssignments = studentIds.Zip(assignmentIds, (sId, aId) => IsAssignmentDuplicate(sId, aId)).ToList();
+
+                var quizModuleMatches = _scoreFromExcelDTOs.Select(dto => dto.ListQuizScore.Keys.Select(quizName => IsQuizNameMatchModuleId(GetFromQuizNameToQuizId(quizName, GetFromModuleNameToModuleId(dto.ModuleName)), GetFromModuleNameToModuleId(dto.ModuleName)))).ToList();
+                var assignmentModuleMatches = _scoreFromExcelDTOs.Select(dto => dto.ListAssignmentScore.Keys.Select(assignmentName => IsAssignmentNameMatchModuleId(GetFromAssignmentNameToAssignmentId(assignmentName, GetFromModuleNameToModuleId(dto.ModuleName)), GetFromModuleNameToModuleId(dto.ModuleName)))).ToList();
+
+                bool anyQuizModuleMismatch = quizModuleMatches.Any(matchList => matchList.Any(match => !match));
+                bool anyAssignmentModuleMismatch = assignmentModuleMatches.Any(matchList => matchList.Any(match => !match));
+                bool isModuleMatch = !anyQuizModuleMismatch && !anyAssignmentModuleMismatch;
+                bool isFirstRowDuplicate = duplicateModules[0] || duplicateQuizzes[0] || duplicateAssignments[0];
+
+                if (!isFirstRowDuplicate && isModuleMatch || option == "Allow" || option == "Skip" || option == "Replace")
+                {
+                    bool areSubsequentRowsDuplicates = duplicateModules.Skip(1).Any(x => x) || duplicateQuizzes.Skip(1).Any(x => x) || duplicateAssignments.Skip(1).Any(x => x);
+
+
+                    if (!areSubsequentRowsDuplicates || option == "Allow" || option == "Skip" || option == "Replace")
+                    {
+                        foreach (var _scoreOfAstudent in _scoreFromExcelDTOs)
+                        {
+                            string studentId = GetFromAccountToStudentId(_scoreOfAstudent.FAAccount);
+                            int index = _scoreFromExcelDTOs.IndexOf(_scoreOfAstudent);
+                            bool assignmentDuplicateFound = duplicateAssignments[index];
+                            bool quizDuplicateFound = duplicateQuizzes[index];
+                            string moduleId = GetFromModuleNameToModuleId(_scoreOfAstudent.ModuleName);
+
+                            foreach (var dictionary in _scoreOfAstudent.ListModuleScore)
+                            {
+                                double moduleScore = dictionary.Value;
+                                int moduleLevel = _scoreOfAstudent.ModuleLevel;
+
+                                if (duplicateModules[index] || assignmentDuplicateFound || quizDuplicateFound)
+                                {
+                                    switch (option)
+                                    {
+                                        case "Allow":
+                                            SaveToModuleStudent(studentId, moduleId, moduleScore, moduleLevel);
+                                            break;
+                                        case "Skip":
+                                            if (!IsModuleDuplicate(studentId, moduleId))
+                                                SaveToModuleStudent(studentId, moduleId, moduleScore, moduleLevel);
+                                            break;
+                                        case "Replace":
+                                            SaveToModuleStudentR(studentId, moduleId, moduleScore, moduleLevel);
+                                            break;
+                                        default:
+                                            throw new ArgumentException("Invalid option provided.");
+                                    }
+                                }
+                                else
+                                {
+                                    SaveToModuleStudent(studentId, moduleId, moduleScore, moduleLevel);
+                                }
+                            }
+
+                            foreach (var dictionary in _scoreOfAstudent.ListQuizScore)
+                            {
+                                string quizId = GetFromQuizNameToQuizId(dictionary.Key, moduleId);
+                                double score = dictionary.Value;
+
+                                if (duplicateQuizzes[index] || assignmentDuplicateFound)
+                                {
+                                    switch (option)
+                                    {
+                                        case "Allow":
+                                            SaveToQuizStudent(studentId, quizId, score);
+                                            break;
+                                        case "Skip":
+                                            if (!IsQuizDuplicate(studentId, quizId))
+                                                SaveToQuizStudent(studentId, quizId, score);
+                                            break;
+                                        case "Replace":
+                                            SaveToQuizStudentR(studentId, quizId, score);
+                                            break;
+                                        default:
+                                            throw new ArgumentException("Invalid option provided.");
+                                    }
+                                }
+                                else
+                                {
+                                    SaveToQuizStudent(studentId, quizId, score);
+                                }
+                            }
+
+                            foreach (var dictionary in _scoreOfAstudent.ListAssignmentScore)
+                            {
+                                string assignmentId = GetFromAssignmentNameToAssignmentId(dictionary.Key, moduleId);
+                                double score = dictionary.Value;
+
+                                if (duplicateAssignments[index])
+                                {
+                                    switch (option)
+                                    {
+                                        case "Allow":
+                                            SaveToAssignmentStudent(studentId, assignmentId, score);
+                                            break;
+                                        case "Skip":
+                                            if (!IsAssignmentDuplicate(studentId, assignmentId))
+                                                SaveToAssignmentStudent(studentId, assignmentId, score);
+                                            break;
+                                        case "Replace":
+                                            SaveToAssignmentStudentR(studentId, assignmentId, score);
+                                            break;
+                                        default:
+                                            throw new ArgumentException("Invalid option provided.");
+                                    }
+                                }
+                                else
+                                {
+                                    SaveToAssignmentStudent(studentId, assignmentId, score);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        response.IsSuccess = false;
+                        response.Message = "Duplicates found.";
+                    }
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Duplicates found.";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.IsSuccess = false;
+                response.Message = ex.Message;
+            }
+
+            return response;
+        }
+
+        //Kiểm tra xem quiz có khớp với moduleId được cung cấp không
+        public bool IsQuizNameMatchModuleId(string quizId, string moduleId)
+        {
+           return _context.Quizzes.Any(q => q.QuizId.Equals(quizId) && q.ModuleId.Equals(moduleId));
+        }
+        //Kiểm tra xem assgigment có khớp với moduleId được cung cấp không
+        public bool IsAssignmentNameMatchModuleId(string assignmenId, string moduleId)
+        {
+
+                return _context.Assignments.Any(a => a.AssignmentId.Equals(assignmenId) && a.Module.ModuleId.Equals(moduleId));
+            
+        }
+        //Kiểm tra xem quiz và student id có trùng với thông tin có sẵn trong database không
+
+        public bool IsQuizDuplicate(string studentId, string quizId)
+        {
+            return _context.QuizStudents.Any(x => x.StudentId == studentId && x.QuizId == quizId);
+            
+        }
+        //Kiểm tra xem assigment và student id có trùng với thông tin có sẵn trong database không
+        public bool IsAssignmentDuplicate(string studentId, string assignmentId)
+        {
+
+                return _context.Scores.Any(x => x.StudentId == studentId && x.AssignmentId == assignmentId);
+            
+        }
+        //Kiểm tra xem module và student id có trùng với thông tin có sẵn trong database không
+        public bool IsModuleDuplicate(string studentId, string moduleId)
+        {
+
+                return _context.StudentModules.Any(x => x.StudentId == studentId && x.ModuleId == moduleId);
+            
+        }
+
+        public void SaveToTable<T>(T entity) where T : class
+        {
+
+                _context.Set<T>().Add(entity);
+                _context.SaveChanges();
+            
+        }
+
+        // Lưu dữ liệu vào bảng QuizStudent
+        public void SaveToQuizStudent(string studentId, string quizId, double score)
+        {
+            QuizStudent quizStudent = new QuizStudent
+            {
+                StudentId = studentId,
+                QuizId = quizId,
+                Score = score,
+                SubmissionDate = DateTime.Now
+            };
+
+            SaveToTable(quizStudent);
+        }
+
+        // Lưu dữ liệu vào bảng Scores (AssignmentStudent)
+        public void SaveToAssignmentStudent(string studentId, string assignmentId, double score)
+        {
+            Score assignmentStudent = new Score
+            {
+                StudentId = studentId,
+                AssignmentId = assignmentId,
+                Score1 = score,
+                SubmissionDate = DateTime.Now
+            };
+
+            SaveToTable(assignmentStudent);
+        }
+
+        // Lưu dữ liệu vào bảng StudentModules
+        public void SaveToModuleStudent(string studentId, string moduleId, double moduleScore, int moduleLevel)
+        {
+            StudentModule ModuleStudent = new StudentModule
+            {
+                StudentId = studentId,
+                ModuleId = moduleId,
+                ModuleScore = moduleScore,
+                ModuleLevel = moduleLevel
+            };
+
+            SaveToTable(ModuleStudent);
+        }
+
+        //Save vào ModuleStudent với option Replace
+        public void SaveToModuleStudentR(string studentId, string moduleId, double moduleScore, int moduleLevel)
+        {
+
+                try
+                {
+                    var existingStudentModules = _context.StudentModules
+                        .Where(x => x.StudentId == studentId && x.ModuleId == moduleId)
+                        .ToList();
+
+                    foreach (var existingStudentModule in existingStudentModules)
+                    {
+                        existingStudentModule.ModuleScore = Math.Round(moduleScore, 2);
+                        existingStudentModule.ModuleLevel = moduleLevel;
+                    }
+
+                    _context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Failse to save", ex);
+                }
+            
+        }
+        //Save vào quizStudent với option Replace
+        public void SaveToQuizStudentR(string studentId, string quizId, double score)
+        {
+
+                try
+                {
+                    var existingStudentQuizs = _context.QuizStudents
+                        .Where(x => x.StudentId == studentId && x.QuizId == quizId)
+                        .ToList();
+
+                    foreach (var existingStudentQuiz in existingStudentQuizs)
+                    {
+                        existingStudentQuiz.Score = Math.Round(score, 2);
+                    }
+
+                    _context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Failse to save", ex);
+                }
+            
+        }
+        //Save vào assigment với option Replace
+        public void SaveToAssignmentStudentR(string studentId, string assignmentId, double score)
+        {
+
+                try
+                {
+                    var existingAssignmentStudents = _context.Scores
+                            .Where(x => x.StudentId == studentId && x.AssignmentId == assignmentId)
+                            .ToList();
+
+                    foreach (var existingAssignmentStudent in existingAssignmentStudents)
+                    {
+                        existingAssignmentStudent.Score1 = Math.Round(score, 2);
+                        existingAssignmentStudent.SubmissionDate = DateTime.Now;
+                    }
+                    _context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Failse to save", ex);
+                }
+            
+        }
+
+        //Đổi Quiz name sang quiz id
+        public string GetFromQuizNameToQuizId(string quizName, string moduleId)
+        {
+
+                var quiz = _context.Quizzes.FirstOrDefault(s => s.QuizName.Equals(quizName) && s.ModuleId.Equals(moduleId));
+                if (quiz != null)
+                {
+                    return quiz.QuizId;
+                }
+                else
+                {
+                    throw new Exception("The mandatory fields are missing");
+                }
+            
+        }
+
+        //Đổi tên assigment qua id
+        public string GetFromAssignmentNameToAssignmentId(string assignmentName, string moduleId)
+        {
+
+                var assignment = _context.Assignments.FirstOrDefault(s => s.AssignmentName.Equals(assignmentName) && s.Module.ModuleId.Equals(moduleId));
+                if (assignment != null)
+                {
+                    return assignment.AssignmentId;
+                }
+                else
+                {
+                    throw new Exception("The mandatory fields are missing");
+                }
+            
+        }
+
+        //Đổi tên FAAccount qua id
+        public string GetFromAccountToStudentId(string FAAcount)
+        {
+
+                var student = _context.Students.FirstOrDefault(s => s.Faaccount.ToLower().Equals(FAAcount.ToLower()));
+                if (student != null)
+                {
+                    return student.StudentId;
+                }
+                else
+                {
+                    throw new Exception("The mandatory fields are missing");
+                }
+            
+        }
+        //Đổi moduleName sang moduleiD
+        public string GetFromModuleNameToModuleId(string moduleName)
+        {
+
+                var module = _context.Modules.FirstOrDefault(s => s.ModuleName.Equals(moduleName));
+                if (module != null)
+                {
+                    return module.ModuleId;
+                }
+                else
+                {
+                    throw new Exception("The mandatory fields are missing");
+                }
+            
+        }
+
+        //Đọc dữ liệu từ file Excell
+        public List<ScoreFromExcelDTO> GetListFromExcel(ImportExcelScoreRequest request, Stream stream)
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream);
+            DataSet dataset = reader.AsDataSet(new ExcelDataSetConfiguration
+            {
+                UseColumnDataType = false,
+                ConfigureDataTable = _ => new ExcelDataTableConfiguration
+                {
+                    UseHeaderRow = false
+                }
+            });
+
+            DataTable dataTable = dataset.Tables[0];
+            if (dataTable.Columns.Count != 26)
+            {
+                throw new ArgumentException("The file format is incorrect");
+            }
+
+            try
+            {
+                if (dataTable.Rows.Count == 0)
+                {
+                    return new List<ScoreFromExcelDTO>();
+                }
+
+                List<ScoreFromExcelDTO> scoreFromExcelDTOs = new List<ScoreFromExcelDTO>();
+
+                List<string> headQuizs = GetHeadings(dataTable, 3, 8);
+                List<string> headAssignments = GetHeadings(dataTable, 10, 12);
+                List<string> headModules = GetHeadings(dataTable, 17, 17);
+
+                for (int i = 5; i < dataTable.Rows.Count; i++)
+                {
+                    try
+                    {
+                        ScoreFromExcelDTO row = new ScoreFromExcelDTO
+                        {
+
+                            Name = dataTable.Rows[i].ItemArray[0].ToString(),
+                            FAAccount = Convert.ToString(dataTable.Rows[i].ItemArray[1] ?? "-1"),
+                            QuizFinal = Convert.ToDouble(dataTable.Rows[i].ItemArray[14] ?? -1),
+                            Audit = Convert.ToInt32(dataTable.Rows[i].ItemArray[15] ?? -1),
+                            PracticalFinal = Convert.ToInt32(dataTable.Rows[i].ItemArray[16] ?? -1),
+                            Mock = Convert.ToDouble(dataTable.Rows[i].ItemArray[21] ?? -1),
+                            ModuleName = Convert.ToString(dataTable.Rows[1].ItemArray[3] ?? "-1"),
+                            ModuleLevel = Convert.ToInt32(dataTable.Rows[i].ItemArray[19] ?? "-1")
+                        };
+
+
+
+
+
+                        List<double> quizScores = GetColumnValues<double>(dataTable, i, 3, 8);
+                        List<double> assignmentScores = GetColumnValues<double>(dataTable, i, 10, 12);
+                        List<double> moduleScores = GetColumnValues<double>(dataTable, i, 17, 17);
+                        try
+                        {
+                            for (int j = 0; j < headQuizs.Count; j++)
+                            {
+                                row.ListQuizScore.Add(headQuizs[j], quizScores[j]);
+                            }
+
+                            for (int j = 0; j < headAssignments.Count; j++)
+                            {
+                                row.ListAssignmentScore.Add(headAssignments[j], assignmentScores[j]);
+                            }
+
+                            for (int j = 0; j < headModules.Count; j++)
+                            {
+                                row.ListModuleScore.Add(headModules[j], moduleScores[j]);
+                            }
+
+                            scoreFromExcelDTOs.Add(row);
+
+                        }
+                        catch (Exception ex)
+                        {
+                            throw new Exception("The file format is incorrect", ex);
+                        }
+                    }
+                    catch (InvalidCastException ex)
+                    {
+                        throw new ArgumentException("The mandatory fields are missing", ex);
+                    }
+
+                }
+
+                return scoreFromExcelDTOs;
+            }
+            catch (FormatException ex)
+            {
+                throw new ArgumentException("Datatype is incorrect", ex);
+            }
+
+        }
+
+        private List<T> GetColumnValues<T>(DataTable dataTable, int rowIndex, int startColumnIndex, int endColumnIndex)
+        {
+            List<T> columnValues = new List<T>();
+            for (int i = startColumnIndex; i <= endColumnIndex; i++)
+            {
+                T value;
+                if (TryParseValue<T>(dataTable.Rows[rowIndex].ItemArray[i]?.ToString(), out value))
+                {
+                    columnValues.Add(value);
+                }
+                else
+                {
+                    new Exception("The datatype is incorrect");
+                }
+            }
+            return columnValues;
+        }
+
+        private List<string> GetHeadings(DataTable dataTable, int startColumnIndex, int endColumnIndex)
+        {
+            List<string> headings = new List<string>();
+            for (int i = startColumnIndex; i <= endColumnIndex; i++)
+            {
+                headings.Add(dataTable.Rows[3].ItemArray[i].ToString());
+            }
+            return headings;
+        }
+
+        private bool TryParseValue<T>(string value, out T result)
+        {
+            try
+            {
+                result = (T)Convert.ChangeType(value, typeof(T));
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Datatype is incorrect.", ex);
+
+            }
+        }
+
+    }
+
+}

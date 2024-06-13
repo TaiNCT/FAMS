@@ -1,0 +1,46 @@
+{
+  "IdentityServiceUrl": "http://identity-svc",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "trainingprogram-svc",
+          "Port": 5008
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms",
+      "UpstreamHttpMethod": ["GET", "POST", "PUT"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "TrainingProgram"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms/{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "trainingprogram-svc",
+          "Port": 5008
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms/{params}",
+      "UpstreamHttpMethod": ["GET", "DELETE", "PATCH", "PUT", "POST"],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": ["FamsApp", "openid", "profile", "offline_access"]
+      },
+      "RouteClaimsRequirement": {
+        "Role": "Admin, Trainer, Super Admin",
+        "Function": "TrainingProgram"
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}

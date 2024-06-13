@@ -1,0 +1,55 @@
+.titleImportPopUp {
+  background-color: #2d3748;
+  color: white;
+  text-align: center;
+  padding: 12px;
+}
+
+.maincontent {
+  padding-top: 16px !important;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadContainer {
+  padding: 20px;
+}
+
+.customFileButton {
+  background-color: #2d3748;
+  padding: 4px 28px;
+  border-radius: 8px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.customFileButton:hover {
+  background-color: #0a0c0f;
+  color: white;
+  opacity: 0.5s;
+}
+
+.cancelbtn {
+  color: red;
+  text-decoration: underline red;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.importbtn {
+  text-transform: capitalize;
+
+  padding: 4px 28px;
+  border-radius: 8px;
+  color: white;
+  background-color: #2d3748;
+  transition: background-color 0.3s ease;
+}
+
+.importbtn:hover {
+  background-color: #0a0c0f !important;
+  color: white;
+  opacity: 0.5s;
+}

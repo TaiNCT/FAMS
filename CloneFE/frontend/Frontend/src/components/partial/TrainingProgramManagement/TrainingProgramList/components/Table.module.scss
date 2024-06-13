@@ -1,0 +1,73 @@
+// Table.scss
+.table_container {
+    border: 1px solid #ffff;
+}
+  
+.table_grid {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 2fr 2fr 2fr 3fr 0.5fr;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.24);
+}
+
+.table_cell_hover {    
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+.table_header {
+    opacity: 1;
+}
+  
+.table_cell {
+    align-items: center;
+    border-bottom: 1px solid black;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.table_cell_not_border {
+    border-bottom: none;
+}
+
+.table_cell_id {
+    justify-content: center;
+}
+  
+.table_cell_program_name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 500px;
+    white-space: pre-wrap;
+    font-weight: bold;
+}
+  
+.table_cell_status {
+    color: #fff;
+    font-weight: normal;
+}
+
+.table_cell_status_text {
+    white-space: nowrap;
+}
+
+.table_cell_menu_btn {
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+  
+.action_button {
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 100%;
+    padding: 0;
+}
+  
+.program_status {
+    border-radius: 15px;
+}
+  
+  

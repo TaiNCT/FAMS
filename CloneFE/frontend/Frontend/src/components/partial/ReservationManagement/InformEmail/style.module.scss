@@ -1,0 +1,93 @@
+/* Apply styles to the body */
+body {
+  // height: 100vh;
+  font-family: "Nunito", sans-serif; /* Apply Nunito font to the entire document */
+  color: #2d3748;
+}
+
+/* Define styles for the container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  margin-top: 15em;
+}
+
+/* Header styles */
+.header {
+  background-color: #2d3748;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+}
+
+/* Table styles */
+.table {
+  width: 60%;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0; /* Short-hand margin property */
+  padding: 20px;
+}
+
+/* Notification styles */
+.notification {
+  margin: 10px 0 20px 20px; /* Adjusted margin */
+}
+
+/* Row styles */
+.row {
+  margin-bottom: 15px; /* Reduced margin */
+  display: flex;
+  justify-content: space-between;
+
+  /* Label styles */
+  .label {
+    font-weight: bold;
+    margin-right: 10px;
+    flex: 2; /* 2/12 */
+    text-align: left;
+  }
+
+  /* Content styles */
+  .content {
+    flex: 10; /* 10/12 */
+    text-align: left;
+  }
+}
+
+/* Button styles */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.button_back {
+  margin-right: 10px;
+  padding: 5px 10px; /* Adjusted padding */
+  border: 1px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button_send {
+  margin-left: 10px;
+  padding: 5px 10px; /* Adjusted padding */
+  background-color: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for button */
+.button_send:hover {
+  background-color: #1a202c; /* Darken the background color on hover */
+}

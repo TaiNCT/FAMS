@@ -1,0 +1,80 @@
+﻿No: 1 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 2 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 3 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 4 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 5 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 6 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 7 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 8 - April 09, 2024 12:29:12 - deptraisigai - Add new email template
+No: 9 - April 09, 2024 12:30:00 - deptraisigai - Add new email template
+No: 10 - April 09, 2024 12:30:57 - deptraisigai - Add new email template
+No: 11 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 12 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 13 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 14 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 15 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 16 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 17 - April 09, 2024 11:54:49 - deptraisigai - Add new email template
+No: 18 - April 09, 2024 12:29:12 - deptraisigai - Add new email template
+No: 19 - April 09, 2024 12:30:00 - deptraisigai - Add new email template
+No: 20 - April 09, 2024 12:30:57 - deptraisigai - Add new email template
+No: 21 - April 10, 2024 17:43:18 - deptraisigai - Send email
+No: 22 - T4ánsau CN 4 11, 2024 16:02:20 - deptraisigai - Add new email template
+No: 23 - T4ánsau CN 4 11, 2024 16:30:39 - deptraisigai - Add new email template
+No: 24 - T4ánsau CN 4 11, 2024 16:46:00 - deptraisigai - Add new email template
+No: 25 - T5ánsau CN 4 11, 2024 17:09:22 - deptraisigai - Add new email template
+No: 26 - T9ánsau CN 4 12, 2024 21:47:36 - deptraisigai - Add new email template
+No: 27 - T10ánsau CN 4 12, 2024 22:03:20 - deptraisigai - Add new email template
+No: 28 - T10ánsau CN 4 12, 2024 22:06:04 - deptraisigai - Add new email template
+No: 29 - T10ánsau CN 4 12, 2024 22:53:02 - deptraisigai - Add new email template
+No: 30 - T10ánsau CN 4 12, 2024 22:56:58 - deptraisigai - Add new email template
+No: 31 - T10ánsau CN 4 12, 2024 22:58:17 - deptraisigai - Add new email template
+No: 22 - April 11, 2024 22:16:16 - deptraisigai - Add new email template
+No: 23 - April 11, 2024 22:17:08 - deptraisigai - Add new email template
+No: 24 - April 11, 2024 22:17:32 - deptraisigai - Add new email template
+No: 25 - April 11, 2024 22:17:51 - deptraisigai - Add new email template
+No: 26 - April 11, 2024 22:18:06 - deptraisigai - Add new email template
+No: 27 - April 11, 2024 22:20:13 - deptraisigai - Add new email template
+No: 28 - April 11, 2024 22:29:23 - deptraisigai - Add new email template
+No: 29 - April 11, 2024 22:29:39 - deptraisigai - Add new email template
+No: 30 - April 11, 2024 22:29:52 - deptraisigai - Add new email template
+No: 31 - April 11, 2024 22:30:16 - deptraisigai - Add new email template
+No: 32 - April 11, 2024 22:30:28 - deptraisigai - Add new email template
+No: 33 - April 11, 2024 22:30:52 - deptraisigai - Add new email template
+No: 34 - April 11, 2024 22:33:35 - deptraisigai - Add new email template
+No: 35 - April 11, 2024 23:46:53 - deptraisigai - Add new email template
+No: 36 - April 11, 2024 23:56:23 - deptraisigai - Add new email template
+No: 37 - April 12, 2024 13:50:02 - deptraisigai - Add new email template
+No: 38 - April 13, 2024 13:09:57 - deptraisigai - Edit email template
+No: 39 - April 13, 2024 13:11:28 - deptraisigai - Edit email template
+No: 40 - April 13, 2024 13:12:15 - deptraisigai - Edit email template
+No: 41 - April 13, 2024 13:13:14 - deptraisigai - Edit email template
+No: 42 - April 13, 2024 13:14:31 - deptraisigai - Edit email template
+No: 43 - April 13, 2024 14:33:08 - deptraisigai - Edit email template
+No: 44 - April 13, 2024 15:00:52 - deptraisigai - Send email
+No: 45 - April 13, 2024 15:01:36 - deptraisigai - Send email
+No: 46 - April 13, 2024 15:01:48 - deptraisigai - Send email
+No: 47 - April 13, 2024 15:02:09 - deptraisigai - Send email
+No: 48 - April 13, 2024 15:09:07 - deptraisigai - Send email
+No: 49 - April 13, 2024 15:10:05 - deptraisigai - Send email
+No: 50 - April 13, 2024 15:11:50 - deptraisigai - Send email
+No: 51 - April 13, 2024 15:13:29 - deptraisigai - Send email
+No: 52 - April 13, 2024 15:16:06 - deptraisigai - Send email
+No: 53 - April 13, 2024 17:17:15 - deptraisigai - Edit email template
+No: 54 - April 13, 2024 18:37:33 - deptraisigai - Send email
+No: 55 - April 13, 2024 18:43:36 - deptraisigai - Send email
+No: 56 - April 13, 2024 22:01:57 - deptraisigai - Send email
+No: 57 - April 13, 2024 23:18:47 - deptraisigai - Send email
+No: 58 - April 13, 2024 23:22:31 - deptraisigai - Edit email template
+No: 59 - April 13, 2024 23:23:43 - deptraisigai - Send email
+No: 60 - April 13, 2024 23:25:02 - deptraisigai - Send email
+No: 61 - April 13, 2024 23:32:22 - deptraisigai - Edit email template
+No: 62 - April 13, 2024 23:32:56 - deptraisigai - Edit email template
+No: 63 - April 13, 2024 23:33:09 - deptraisigai - Send email
+No: 64 - April 13, 2024 23:33:33 - deptraisigai - Edit email template
+No: 65 - April 13, 2024 23:33:56 - deptraisigai - Send email
+No: 66 - April 13, 2024 23:54:01 - deptraisigai - Edit email template
+No: 67 - April 14, 2024 02:53:05 - deptraisigai - Edit email template
+No: 68 - April 14, 2024 14:13:44 - deptraisigai - Send email
+No: 69 - April 14, 2024 14:18:16 - deptraisigai - Send email
+No: 70 - April 14, 2024 14:21:28 - deptraisigai - Send email

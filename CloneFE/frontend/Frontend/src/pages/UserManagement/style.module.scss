@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+
+body{
+  overflow: auto !important;
+}
+
+.main {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 20em auto;
+  grid-template-rows: 5em 1fr auto;
+  min-height: 100vh;
+
+  > div:nth-of-type(1) {
+    // sidebar styling goes here
+
+    grid-area: sidebar;
+  }
+
+  > div:nth-of-type(2) {
+    // Navbar styling goes here
+
+    grid-area: navbar;
+  }
+
+  > header {
+    // Navbar styling goes here
+    grid-area: navbar;
+  }
+
+  > footer {
+    grid-area: footer;
+    width: 100%;
+  }
+}
+
+.ColumnGroupingTable {
+  grid-area: content;
+  size: 90%;
+  padding: 20px;
+}
+

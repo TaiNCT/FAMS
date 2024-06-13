@@ -1,0 +1,425 @@
+{
+  "IdentityServiceUrl": "http://localhost:5000",
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/connect/token",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/identity",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/identity",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/trainingprograms/{params}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7001
+        }
+      ],
+      "UpstreamPathTemplate": "/api/trainingprograms/{params}",
+      "UpstreamHttpMethod": [ "GET", "DELETE", "PATCH", "PUT", "POST" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      }
+    },
+    //--ClassManagement routers
+    //Create and Get Class
+    {
+      "DownstreamPathTemplate": "/api/Class",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    //Search Class
+    {
+      "DownstreamPathTemplate": "/api/Class/{keyword}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/{keyword}",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    // Get Calendar
+    {
+      "DownstreamPathTemplate": "/api/Class/calendar",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/calendar",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    // Get Class Filter
+    {
+      "DownstreamPathTemplate": "/api/Class/Filter",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/Filter",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    //Get Class Filter Week
+    {
+      "DownstreamPathTemplate": "/api/Class/FilterWeek",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/FilterWeek",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    //Get ViewInfo
+    {
+      "DownstreamPathTemplate": "/api/Class/ViewInfo",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/ViewInfo",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    // Get ViewInfoClassDetail
+    {
+      "DownstreamPathTemplate": "/api/Class/ViewInfoClassDetail",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/ViewInfoClassDetail",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    // Get Class Week
+    {
+      "DownstreamPathTemplate": "/api/Class/Week",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/Week",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    // Get Class Attendee Id
+    {
+      "DownstreamPathTemplate": "/api/Class/Attendee/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/Attendee/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/Class/Time",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/Time",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/Class/ListSyllabusRemaining",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/ListSyllabusRemaining",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/Class/AddTrainingProgramSyllabus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/AddTrainingProgramSyllabus",
+      "UpstreamHttpMethod": [ "POST" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "FamsApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/Class/DuplicatedClass/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/DuplicatedClass/{id}",
+      "UpstreamHttpMethod": [ "POST" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/Class/{trainingProgramCode}/{syllabusId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/{trainingProgramCode}/{syllabusId}",
+      "UpstreamHttpMethod": [ "DELETE" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/Class/AddSyllabus",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Class/AddSyllabus",
+      "UpstreamHttpMethod": [ "POST" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/ExpandClass/GetTrainingProgramList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ExpandClass/GetTrainingProgramList",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/ExpandClass/GetUserBasic",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ExpandClass/GetUserBasic",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/ExpandClass/CreateclassUser",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ExpandClass/CreateclassUser",
+      "UpstreamHttpMethod": [ "POST" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/ExpandClass/GetSyllabiByTrainingProgramCode/{trainingProgramCode}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ExpandClass/GetSyllabiByTrainingProgramCode/{trainingProgramCode}",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/FSU/GetFSUList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/FSU/GetFSUList",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/Location/GetLocationList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Location/GetLocationList",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    },
+    {
+      "DownstreamPathTemplate": "/api/AttendeeType/GetAttendeeTypeList",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7233
+        }
+      ],
+      "UpstreamPathTemplate": "/api/AttendeeType/GetAttendeeTypeList",
+      "UpstreamHttpMethod": [ "GET" ]
+      //"AuthenticationOptions": {
+      //  "AuthenticationProviderKey": "Bearer",
+      //  "AllowedScopes": [ "YourApp", "openid", "profile" ]
+      //}
+    }
+  ],
+  "GlobalConfiguration": {}
+}
+

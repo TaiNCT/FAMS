@@ -1,0 +1,139 @@
+.closeButtonWrapper {
+  width: 100%;
+  > button {
+    float: right;
+    border: 0;
+    border-radius: 50%;
+  }
+}
+
+.dateOfBirthWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+}
+
+.checkboxContainer {
+  display: flex;
+  margin-top: 30px;
+}
+
+.genderWrapper {
+  display: flex;
+  margin-right: 80px;
+  > p {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.checkboxModule {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxItems {
+  display: flex;
+  margin-left: 16px;
+
+  > p {
+    margin: 0 0 0 16px;
+  }
+}
+
+.instanceChild {
+  border-radius: 5px;
+  max-width: 100%;
+  overflow: hidden;
+  height: 27px;
+  flex-shrink: 0;
+  object-fit: contain;
+  transform: rotate(-0.11deg);
+}
+.frameGroup {
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-3xs);
+}
+.frameChild {
+  align-self: stretch;
+  max-width: 100%;
+  overflow: hidden;
+  height: 123px;
+  flex-shrink: 0;
+  object-fit: contain;
+  transform: rotate(-0.11deg);
+}
+.instanceParent {
+  align-self: stretch;
+  height: 217.3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+}
+.clear {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button {
+  width: 92px;
+  height: 32px;
+  margin-left: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2d3748;
+  color: white;
+}
+.filter {
+  position: relative;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.frameParent,
+.buttonWrapper {
+  display: flex;
+  box-sizing: border-box;
+  gap: var(--gap-11xl);
+}
+
+.buttonWrapper {
+  width: 688.2px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  height: 41.1px;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: var(--padding-8xs) 0;
+  color: #eae3e3;
+}
+
+.frameParent {
+  position: fixed;
+  height: 400px;
+  top: 50%; /* Position the top of the modal at 50% from the top of the viewport */
+  left: 50%; /* Position the left side of the modal at 50% from the left of the viewport */
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px 16px;
+  text-align: left;
+  border-radius: 10px;
+  font-size: var(--button-md-size);
+  color: #2a4365;
+  font-family: var(--caption-1);
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05),
+    0px 0px 1px 0px rgba(0, 0, 0, 0.05), 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

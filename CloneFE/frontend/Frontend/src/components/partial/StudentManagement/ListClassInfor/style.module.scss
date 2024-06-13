@@ -1,0 +1,105 @@
+.main {
+  box-sizing: border-box;
+}
+
+.heading {
+  padding: 5px 7px;
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  color: white;
+}
+
+.ListInforContainer {
+  margin-top: 3em;
+  overflow-x: auto;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  min-height: 120px;
+}
+
+.ListInforContainer::-webkit-scrollbar {
+  display: none;
+}
+.ClassContainer {
+  margin-left: 2px;
+  box-sizing: border-box;
+  min-width: 434px;
+  max-height: 156px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.ClassHeader {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  > h4 {
+    color: #2d3748;
+    font-size: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .ClassHeader_Status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 50px;
+    font-size: 13px;
+    min-width: 92px;
+  }
+
+  .ClassHeader_Status.InClass {
+    background-color: #2d3748;
+  }
+
+  .ClassHeader_Status.Finish {
+    background-color: #2f903f;
+  }
+
+  .ClassHeader_Status.DropOut {
+    background-color: red;
+  }
+
+  .ClassHeader_Status.Reserve {
+    background-color: orange;
+  }
+}
+
+.ClassBody {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+
+  > p {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.ClassFooter {
+  margin-top: 10px;
+  > p {
+    font-size: 14px;
+  }
+}
+
+.addNewClassInfor {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 156px;
+  transition: width 2s, ease;
+}

@@ -1,0 +1,54 @@
+:root {
+  --navbar-height: 60px;
+  --footer-height: 105px;
+  --primary-color: #5DADE2; 
+  --secondary-color: #417AB7; 
+  --error-color: #CC0000; 
+}
+
+.notfound {
+  height: calc(100vh - var(--navbar-height) - var(--footer-height));
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.notfound-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  svg {
+    color: var(--error-color); // Red color for the icon
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 2.5rem; // Larger font size for emphasis
+    color: var(--error-color); // Matching the icon color
+    margin: 20px 0;
+    font-weight: 600; // Semi-bold for better visibility
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); // Subtle shadow for depth
+  }
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  }
+}

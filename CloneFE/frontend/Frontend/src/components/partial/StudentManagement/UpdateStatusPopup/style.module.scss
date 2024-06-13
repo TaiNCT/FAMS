@@ -1,0 +1,32 @@
+.popup-container {
+  .popup-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .popup-content {
+    margin-bottom: 1.5rem;
+
+    .popup-message {
+      margin-bottom: 1rem;
+    }
+
+    .popup-select {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .popup-actions {
+    justify-content: space-between;
+  }
+
+  .popup-button {
+    background-color: #007bff;
+    color: #fff;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

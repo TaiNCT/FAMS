@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "2024-02-26_13_12_56_032": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:56108;http://localhost:56109"
+    }
+  }
+}

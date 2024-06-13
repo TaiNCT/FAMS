@@ -1,0 +1,175 @@
+services:
+  # Email service
+  email-svc:
+    networks:
+      - fams
+    build:
+      context: ./Backend
+      dockerfile: ./EmailInformAPI/Dockerfile
+      args:
+        - ConnectionString=Server=tcp:famsdatabase.database.windows.net,1433;Initial Catalog=FamsDB;Persist Security Info=False;User ID=fams;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+  # Identity service
+  identity-svc:
+    networks:
+      - fams
+    image: backend/identity-svc:latest
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      # - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 6000:8080
+    build:
+      context: .
+      dockerfile: Backend/IdentityAPI/Dockerfile
+    depends_on:
+      - rabbitmq
+
+  # RabbitMQ
+  rabbitmq:
+    networks:
+      - fams
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 5672:5672 # internal port
+      - 15672:15672 # access in browser port
+    volumes:
+      - /var/lib/rabbitmq
+  # API Gateway service
+  gateway:
+    networks:
+      - fams
+    build:
+      context: .
+      dockerfile: ./Backend/APIGateway/Dockerfile
+    ports:
+      - 5000:8000
+  # API Backend services
+  score-svc:
+    networks:
+      - fams
+    build:
+      context: ./Backend
+      dockerfile: ./ScoreManagementAPI/Dockerfile
+      args:
+        - ConnectionString=Server=tcp:famsdatabase.database.windows.net,1433;Initial Catalog=FamsDB;Persist Security Info=False;User ID=fams;Password=Password123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+        - rabbitmqHost=rabbitmq
+    ports:
+      - 7003:8080
+
+  # Training Program service
+  trainingprogram-svc:
+    networks:
+      - fams
+    image: backend/trainingprogram-svc:latest
+    build:
+      context: .
+      dockerfile: Backend/TrainingProgramManagementAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 7001:8080
+  # User service
+  user-svc:
+    networks:
+      - fams
+    build:
+      context: .
+      dockerfile: Backend/UserManagementAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 7002:8080
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+  # Class service
+  class-svc:
+    networks:
+      - fams
+    build:
+      context: .
+      dockerfile: Backend/ClassManagementAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 7233:8080
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+  # Reservation service
+  reservation-svc:
+    networks:
+      - fams
+    build:
+      context: .
+      dockerfile: Backend/ReservationManagementAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 5045:8080
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+
+  student-svc:
+    networks:
+      - fams
+    build:
+      context: .
+      dockerfile: Backend/StudentInfoManagementAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 5031:8080
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+  # Syllabus service
+  syllabus-svc:
+    networks:
+      - fams
+    build:
+      context: .
+      dockerfile: Backend/SyllabusManagementAPI/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - 7100:8080
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+
+  elasticsearch:
+    container_name: els1
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    ports:
+      - 9200:9200
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    networks:
+      - fams
+
+  kibana:
+    container_name: kibana1
+    image: docker.elastic.co/kibana/kibana:8.12.0
+    ports:
+      - 8080:8080
+    depends_on:
+      - rabbitmq
+      - elasticsearch
+
+networks:
+  fams:
+    driver: bridge
+volumes:
+  elasticsearch-data:

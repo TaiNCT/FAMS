@@ -1,0 +1,111 @@
+.image2Icon,
+.logoIcon {
+  height: 59px;
+  width: 92px;
+  position: relative;
+  object-fit: contain;
+}
+.image2Icon {
+  height: 20px;
+  width: 28px;
+}
+.unigate {
+  position: relative;
+  font-size: var(--caption-1-size);
+  font-family: var(--font-roboto);
+  color: var(--neutral-light-n0);
+  text-align: left;
+}
+.frameWrapper,
+.image2Parent {
+  display: flex;
+  justify-content: flex-start;
+}
+.image2Parent {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--gap-6xs);
+}
+.frameWrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-8xs) var(--padding-mini);
+  background-color: var(--color-gray-200);
+  border-radius: var(--br-11xl);
+  flex-direction: column;
+  align-items: flex-start;
+}
+.frameChild {
+  height: 44px;
+  width: 44px;
+  position: relative;
+  object-fit: contain;
+}
+.warriorTran {
+  flex: 1;
+}
+.logOut,
+.warriorTran {
+  position: relative;
+  line-height: 24px;
+  white-space: nowrap;
+}
+.frameGroup,
+.warriorTranParent {
+  align-self: stretch;
+  justify-content: flex-start;
+}
+.warriorTranParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-8xs);
+}
+.frameGroup {
+  gap: var(--gap-6xs);
+}
+.frameGroup,
+.frameParent,
+.header,
+.logoParent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.frameParent {
+  height: 48px;
+  justify-content: flex-start;
+  gap: var(--gap-21xl);
+}
+.header,
+.logoParent {
+  max-width: 100%;
+}
+.logoParent {
+  flex: 1;
+  background-color: var(--main);
+  justify-content: space-between;
+  padding: var(--padding-3xs) var(--padding-xl) var(--padding-3xs)
+    var(--padding-21xl);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+}
+.header {
+  align-self: stretch;
+  background-color: var(--neutral-light-n0);
+  overflow: hidden;
+  justify-content: center;
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--button-md-size);
+  color: var(--neutral-light-n0);
+  font-family: var(--caption-1);
+}
+@media screen and (max-width: 450px) {
+  .frameParent {
+    gap: var(--gap-xl);
+  }
+}
